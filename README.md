@@ -19,7 +19,7 @@ A comprehensive evaluation of Parameter-Efficient Fine-Tuning (PEFT) methods —
 
 ## Overview
 
-- **30 experiments** across 4 datasets, 3 models, 3 PEFT methods
+- **45 experiments** across 5 datasets, 4 models, 3 PEFT methods
 - **2000 training steps** per experiment
 - **Energy consumption** tracked via CodeCarbon
 - **ROUGE-1/2/L** evaluation metrics
@@ -40,9 +40,9 @@ A comprehensive evaluation of Parameter-Efficient Fine-Tuning (PEFT) methods —
 
 ## Models & Methods
 
-**Models**: BART-base, T5-base, GPT-2-medium  
-**PEFT Methods**: LoRA, QLoRA, Adapters  
-**Trainable Parameters**: ~0.38–0.42% of total (>99% reduction)
+**Models**: BART-base, T5-base, GPT-2-medium, LLaMA (TinyLLaMA/GPT-2 substitute)
+**PEFT Methods**: LoRA, QLoRA, Adapters
+**Trainable Parameters**: ~0.18–0.42% of total (>99% reduction)
 
 ---
 
