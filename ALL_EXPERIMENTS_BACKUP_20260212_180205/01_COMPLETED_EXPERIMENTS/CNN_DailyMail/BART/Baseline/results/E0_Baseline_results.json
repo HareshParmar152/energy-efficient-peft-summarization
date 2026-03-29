@@ -1,0 +1,55 @@
+{
+  "experiment_name": "E0_Baseline",
+  "experiment_config": {
+    "name": "E0_GPU_BART_Baseline",
+    "description": "Baseline BART-406M without fine-tuning",
+    "method": "baseline",
+    "training_args": {
+      "per_device_train_batch_size": 2,
+      "per_device_eval_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 0.0002,
+      "num_train_epochs": 0,
+      "warmup_steps": 500,
+      "logging_steps": 50,
+      "save_steps": 500,
+      "eval_steps": 500,
+      "save_total_limit": 5,
+      "load_best_model_at_end": true,
+      "metric_for_best_model": "eval_loss",
+      "greater_is_better": false,
+      "eval_strategy": "steps",
+      "save_strategy": "steps",
+      "report_to": "none",
+      "dataloader_drop_last": true,
+      "remove_unused_columns": false,
+      "prediction_loss_only": true,
+      "eval_accumulation_steps": 4
+    }
+  },
+  "evaluation_results": {
+    "eval_loss": 7.999212741851807,
+    "eval_model_preparation_time": 0.0017,
+    "eval_runtime": 18.5288,
+    "eval_samples_per_second": 5.397,
+    "eval_steps_per_second": 5.397,
+    "eval_rouge1": 0.2921154756291776,
+    "eval_rouge2": 0.12803141087188974,
+    "eval_rougeL": 0.20068816872506937
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.00023782261222281514,
+    "duration_seconds": 34.57048940658569
+  },
+  "system_info": {
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008,
+    "cpu_count": 12,
+    "ram_gb": 16.791048192
+  },
+  "timestamp": "2026-02-06T01:11:41.416931",
+  "duration_minutes": 0.5761748234430949,
+  "rouge_evaluation_time": 9.487605885664623,
+  "rouge_evaluation_timestamp": "2026-02-07T18:15:05.467360",
+  "rouge_samples_evaluated": 100
+}

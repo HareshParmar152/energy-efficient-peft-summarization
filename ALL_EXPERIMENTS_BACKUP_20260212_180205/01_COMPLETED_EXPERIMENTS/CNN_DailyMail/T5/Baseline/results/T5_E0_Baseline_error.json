@@ -1,0 +1,6 @@
+{
+  "experiment_name": "T5_E0_Baseline",
+  "status": "failed",
+  "error": "Object of type Energy is not JSON serializable",
+  "timestamp": "2026-01-30T15:23:37.241639"
+}

@@ -1,0 +1,66 @@
+{
+  "experiment_name": "E3_LoRA_r16",
+  "experiment_config": {
+    "name": "E3_GPU_BART_LoRA_r16",
+    "description": "BART-406M with LoRA rank 16",
+    "method": "lora",
+    "lora_config": {
+      "r": 16,
+      "lora_alpha": 32,
+      "target_modules": [
+        "q_proj",
+        "v_proj",
+        "k_proj",
+        "out_proj"
+      ],
+      "lora_dropout": 0.1,
+      "bias": "none",
+      "task_type": "SEQ_2_SEQ_LM"
+    },
+    "training_args": {
+      "per_device_train_batch_size": 2,
+      "per_device_eval_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 0.0002,
+      "num_train_epochs": 3,
+      "warmup_steps": 500,
+      "logging_steps": 50,
+      "save_steps": 500,
+      "eval_steps": 500,
+      "save_total_limit": 2,
+      "load_best_model_at_end": true,
+      "metric_for_best_model": "eval_loss",
+      "greater_is_better": false,
+      "eval_strategy": "steps",
+      "save_strategy": "steps",
+      "report_to": "none",
+      "dataloader_drop_last": true,
+      "remove_unused_columns": false,
+      "prediction_loss_only": true,
+      "eval_accumulation_steps": 4
+    }
+  },
+  "evaluation_results": {
+    "eval_loss": 2.075404405593872,
+    "eval_rouge1": 0.5573253206001556,
+    "eval_rouge2": 0.2706126909896853,
+    "eval_rougeL": 0.5163238618798773,
+    "eval_runtime": 9.6615,
+    "eval_samples_per_second": 5.175,
+    "eval_steps_per_second": 5.175,
+    "epoch": 3.0
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.088324204326602,
+    "duration_seconds": 7002.46737074852
+  },
+  "system_info": {
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008,
+    "cpu_count": 12,
+    "ram_gb": 0
+  },
+  "timestamp": "2026-01-29T16:10:43.838783",
+  "duration_minutes": 116.70778951247533,
+  "resumed_from_checkpoint": false
+}

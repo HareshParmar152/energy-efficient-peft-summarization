@@ -1,0 +1,12 @@
+{
+  "experiment_name": "E7_QLoRA",
+  "timestamp": "2026-01-30T09:30:02.118880",
+  "training_step": 1870,
+  "epoch": 2.992,
+  "metrics": {
+    "loss": 0
+  },
+  "status": "completed",
+  "resume_checkpoint": null,
+  "completion_time": "2026-01-30T09:30:29.648427"
+}

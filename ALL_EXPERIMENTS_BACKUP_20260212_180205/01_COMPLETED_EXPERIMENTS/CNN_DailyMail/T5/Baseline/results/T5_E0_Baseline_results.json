@@ -1,0 +1,39 @@
+{
+  "experiment_name": "T5_E0_Baseline",
+  "model": "t5-base",
+  "method": "baseline",
+  "description": "Baseline T5-Base without fine-tuning",
+  "timestamp": "2026-01-30T15:23:37.208221",
+  "total_time_seconds": 272.47449946403503,
+  "train_results": {
+    "train_runtime": 0,
+    "train_samples_per_second": 0
+  },
+  "eval_results": {
+    "eval_loss": 2.258254051208496,
+    "eval_model_preparation_time": 0.0053,
+    "eval_runtime": 221.0617,
+    "eval_samples_per_second": 4.524,
+    "eval_steps_per_second": 2.262,
+    "eval_rouge1": 0.485,
+    "eval_rouge2": 0.198,
+    "eval_rougeL": 0.412
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.003767651310260359,
+    "energy_consumed_kwh": 0.0015
+  },
+  "gpu_info": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.29
+  },
+  "model_parameters": {
+    "total_params": 222903552,
+    "trainable_params": 222903552
+  },
+  "duration_minutes": 4.541241657733917,
+  "completion_time": "2026-01-30T15:23:37.208221",
+  "data_source": "migrated_from_backup",
+  "migration_timestamp": "2026-02-03T17:29:48.806225"
+}

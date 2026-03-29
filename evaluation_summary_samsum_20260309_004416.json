@@ -1,0 +1,137 @@
+[
+  {
+    "experiment_id": "E1",
+    "dataset": "SAMSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "LoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.43048077786268524,
+      "rouge2": 0.19330123998423684,
+      "rougeL": 0.3596047051988536,
+      "rougeLsum": 0.35908937038295446
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E2",
+    "dataset": "SAMSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "QLoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.4248802055900758,
+      "rouge2": 0.18811598594825182,
+      "rougeL": 0.3519376028145849,
+      "rougeLsum": 0.3519796592421851
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E3",
+    "dataset": "SAMSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "Adapters",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.4547871933423713,
+      "rouge2": 0.2193177742084273,
+      "rougeL": 0.3818670247588321,
+      "rougeLsum": 0.38156970611195706
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E13",
+    "dataset": "SAMSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "LoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.45553591303280544,
+      "rouge2": 0.21459029967340842,
+      "rougeL": 0.37556860958367155,
+      "rougeLsum": 0.37536051781498814
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E14",
+    "dataset": "SAMSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "QLoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.4236377056215519,
+      "rouge2": 0.1898232953844699,
+      "rougeL": 0.3533605557142574,
+      "rougeLsum": 0.3531584843849665
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E15",
+    "dataset": "SAMSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "Adapters",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.4474901990322988,
+      "rouge2": 0.20667640625054554,
+      "rougeL": 0.369893847312019,
+      "rougeLsum": 0.36944491360661447
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E25",
+    "dataset": "SAMSum",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "LoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.09426126963037569,
+      "rouge2": 0.037774017130432797,
+      "rougeL": 0.077488803166019,
+      "rougeLsum": 0.0777600633773626
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E26",
+    "dataset": "SAMSum",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "QLoRA",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.09356675527714434,
+      "rouge2": 0.03733501565089194,
+      "rougeL": 0.0755355328019047,
+      "rougeLsum": 0.07580767544278073
+    },
+    "timestamp": "20260309_004416"
+  },
+  {
+    "experiment_id": "E27",
+    "dataset": "SAMSum",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "Adapters",
+    "num_samples": 819,
+    "rouge_scores": {
+      "rouge1": 0.09789899301299787,
+      "rouge2": 0.038388839813218126,
+      "rougeL": 0.07835707801809257,
+      "rougeLsum": 0.07868551499068555
+    },
+    "timestamp": "20260309_004416"
+  }
+]

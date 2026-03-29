@@ -1,0 +1,27 @@
+{
+  "experiment_name": "E0_Baseline_Detailed_Evaluation",
+  "model": "facebook/bart-base",
+  "evaluation_type": "text_generation_with_rouge",
+  "rouge_scores": {
+    "rouge1": 0.2929243359640052,
+    "rouge2": 0.12878033787594673,
+    "rougeL": 0.20148248051293194
+  },
+  "additional_metrics": {
+    "bleu": 0.06948931457816175,
+    "avg_generated_length": 98.09,
+    "avg_reference_length": 34.46,
+    "total_samples": 100
+  },
+  "evaluation_info": {
+    "samples_evaluated": 100,
+    "evaluation_time_minutes": 5.7467554926872255,
+    "timestamp": "2026-01-29T11:27:48.630694"
+  },
+  "sample_outputs": {
+    "generated_summary_1": "(CNN)The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territories. The formal accession was marked with a ceremony at The Hague, in the Netherlands, where the court is based. The Palestinians signed the ICC's founding Rome Statute in January, when they also accepted its jurisdiction over allegedly crimes committed \"in the occupied Palestinian territory, including East Jerusalem, since June 13, 2014.\" Later that month, the ICC opened a preliminary examination into the situation inPalestinian territories, paving the way for possible war crimes investigations against Israelis.",
+    "reference_summary_1": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .\nIsrael and the United States opposed the move, which could open the door to war crimes investigations against Israelis .",
+    "generated_summary_2": "(CNN)Never mind cats having nine lives. A stray pooch in Washington State has used up at least three of her own after being hit by a car, apparently whacked on the head with a hammer in a misguided mercy killing and then buried in a field -- only to survive. That's according to Washington State University, where the dog -- a friendly white-and-black bully breed mix now named Theia -- has been receiving care at the Veterinary Teaching Hospital. Four days after her apparent death, the dog managed to stagger to a nearby farm, dirt-covered and emaciated, where she was found by",
+    "reference_summary_2": "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field .\n\"She's a true miracle dog and she deserves a good life,\" says Sara Mellado, who is looking for a home for Theia ."
+  }
+}

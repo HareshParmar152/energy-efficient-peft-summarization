@@ -1,0 +1,6 @@
+{
+  "experiment_name": "LLAMA_E6_AdaLoRA",
+  "status": "failed",
+  "error": "The supplied schedule values don't allow for a budgeting phase. Decrease `tfinal`/`tinit` or increase `total_step`.",
+  "timestamp": "2026-02-04T09:54:35.531663"
+}

@@ -1,0 +1,6 @@
+{
+  "experiment_name": "LLAMA_E0_Baseline",
+  "status": "failed",
+  "error": "You cannot perform fine-tuning on purely quantized models. Please attach trainable adapters on top of the quantized model to correctly perform fine-tuning. Please see: https://huggingface.co/docs/transformers/peft for more details",
+  "timestamp": "2026-02-02T23:45:16.972952"
+}

@@ -1,0 +1,56 @@
+{
+  "experiment_name": "E5_Full_Finetune",
+  "experiment_config": {
+    "name": "E5_GPU_BART_Full_Finetune",
+    "description": "BART-406M full fine-tuning",
+    "method": "full_finetune",
+    "training_args": {
+      "per_device_train_batch_size": 2,
+      "per_device_eval_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 1e-05,
+      "num_train_epochs": 2,
+      "warmup_steps": 100,
+      "logging_steps": 50,
+      "save_steps": 500,
+      "eval_steps": 500,
+      "save_total_limit": 2,
+      "load_best_model_at_end": true,
+      "metric_for_best_model": "eval_loss",
+      "greater_is_better": false,
+      "eval_strategy": "steps",
+      "save_strategy": "steps",
+      "report_to": "none",
+      "dataloader_drop_last": true,
+      "remove_unused_columns": false,
+      "prediction_loss_only": true,
+      "eval_accumulation_steps": 4,
+      "fp16": false,
+      "bf16": false,
+      "max_grad_norm": 0.5
+    }
+  },
+  "evaluation_results": {
+    "eval_loss": NaN,
+    "eval_rouge1": 0.02989032233924027,
+    "eval_rouge2": 0.0,
+    "eval_rougeL": 0.02989032233924027,
+    "eval_runtime": 13.419,
+    "eval_samples_per_second": 3.726,
+    "eval_steps_per_second": 3.726,
+    "epoch": 2.0
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.06535744719030159,
+    "duration_seconds": 5091.519563436508
+  },
+  "system_info": {
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008,
+    "cpu_count": 12,
+    "ram_gb": 0
+  },
+  "timestamp": "2026-01-31T11:46:48.238294",
+  "duration_minutes": 84.85865939060847,
+  "resumed_from_checkpoint": false
+}

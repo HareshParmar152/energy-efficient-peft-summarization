@@ -1,0 +1,10 @@
+{
+  "experiment_name": "E0_Baseline",
+  "timestamp": "2026-01-29T12:02:39.430231",
+  "training_step": 0,
+  "epoch": 0,
+  "metrics": {},
+  "status": "completed",
+  "resume_checkpoint": null,
+  "completion_time": "2026-01-29T12:03:12.084684"
+}

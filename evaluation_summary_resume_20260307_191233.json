@@ -1,0 +1,167 @@
+[
+  {
+    "experiment_id": "E25",
+    "dataset": "PubMed",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "LoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.22038099807153316,
+      "rouge2": 0.055583262194430536,
+      "rougeL": 0.14836249740668828,
+      "rougeLsum": 0.19587017007629176
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E27",
+    "dataset": "PubMed",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "Adapters",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.21612005834263925,
+      "rouge2": 0.059005575022738066,
+      "rougeL": 0.1451490074282198,
+      "rougeLsum": 0.1877743895665288
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E29",
+    "dataset": "PubMed",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "QLoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.2022547287223248,
+      "rouge2": 0.05250555234690661,
+      "rougeL": 0.13666407703967653,
+      "rougeLsum": 0.1793928426780656
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E1",
+    "dataset": "XSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "LoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.3378516405883684,
+      "rouge2": 0.12212456320672305,
+      "rougeL": 0.2693388969496452,
+      "rougeLsum": 0.26963618062410366
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E2",
+    "dataset": "XSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "QLoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.32541021762294486,
+      "rouge2": 0.11265072376604882,
+      "rougeL": 0.2598213998786931,
+      "rougeLsum": 0.26012049930335335
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E3",
+    "dataset": "XSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "Adapters",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.3443687279876362,
+      "rouge2": 0.12972979266049262,
+      "rougeL": 0.27762159714167123,
+      "rougeLsum": 0.2779912917573085
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E13",
+    "dataset": "XSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "LoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.28720955286548566,
+      "rouge2": 0.09025232262610836,
+      "rougeL": 0.2280208095861262,
+      "rougeLsum": 0.22807856424793838
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E14",
+    "dataset": "XSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "QLoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.26218499917351573,
+      "rouge2": 0.07583805148513564,
+      "rougeL": 0.20872637706714445,
+      "rougeLsum": 0.20896776345948662
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E15",
+    "dataset": "XSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "Adapters",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.254974854925635,
+      "rouge2": 0.0744042779322805,
+      "rougeL": 0.20421966606843528,
+      "rougeLsum": 0.20446362871360704
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E25",
+    "dataset": "XSum",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "LoRA",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.12612292999698088,
+      "rouge2": 0.026687735216330246,
+      "rougeL": 0.10459023233648118,
+      "rougeLsum": 0.100722307943469
+    },
+    "timestamp": "20260307_191233"
+  },
+  {
+    "experiment_id": "E27",
+    "dataset": "XSum",
+    "model": "gpt2-medium",
+    "model_type": "gpt2",
+    "method": "Adapters",
+    "num_samples": 1000,
+    "rouge_scores": {
+      "rouge1": 0.13471241802674247,
+      "rouge2": 0.032285553411565665,
+      "rougeL": 0.11067294509668855,
+      "rougeLsum": 0.10971623898318134
+    },
+    "timestamp": "20260307_191233"
+  }
+]

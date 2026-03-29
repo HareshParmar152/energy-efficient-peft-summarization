@@ -1,0 +1,18 @@
+{
+  "experiment_name": "E5_Full_Finetune_Investigation",
+  "checkpoint_tested": "checkpoints\\E5_Full_Finetune\\checkpoint-1250",
+  "rouge_scores": {
+    "rouge1": 0.03328216780114228,
+    "rouge2": 0.0,
+    "rougeL": 0.033399444438607255
+  },
+  "samples_tested": 50,
+  "valid_summaries": 50,
+  "evaluation_time_minutes": 0.21951135794321697,
+  "timestamp": "2026-02-07T18:15:18.659927",
+  "diagnosis": "CRITICAL_FAILURE",
+  "sample_output": {
+    "generated": " to",
+    "reference": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June .\nIsrael and the United States opposed the move, which could open the door to war crimes investigations against Israelis ."
+  }
+}

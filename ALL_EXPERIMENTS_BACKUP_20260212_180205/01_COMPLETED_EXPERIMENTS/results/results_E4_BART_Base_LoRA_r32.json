@@ -1,0 +1,30 @@
+{
+  "experiment_id": "E4_BART_Base_LoRA_r32",
+  "method": "LoRA (rank=32)",
+  "model": "facebook/bart-base",
+  "dataset": "cnn_dailymail",
+  "num_train_samples": 2000,
+  "num_eval_samples": 200,
+  "device": "cuda",
+  "model_dtype": "torch.float16",
+  "lora_config": {
+    "rank": 32,
+    "alpha": 64,
+    "dropout": 0.1
+  },
+  "total_params": 145908480,
+  "trainable_params": 6488064,
+  "trainable_percentage": 4.4466668421191144,
+  "rouge": {
+    "rouge1": 0.3043053875005039,
+    "rouge2": 0.1184359486006092,
+    "rougeL": 0.21799151063022615
+  },
+  "training_time_sec": 1704.646089553833,
+  "energy_kg_co2": 0.0001304222546865018,
+  "hardware_info": {
+    "gpu_model": "RTX 2050",
+    "vram_gb": 4.0,
+    "optimized_for_4gb": true
+  }
+}

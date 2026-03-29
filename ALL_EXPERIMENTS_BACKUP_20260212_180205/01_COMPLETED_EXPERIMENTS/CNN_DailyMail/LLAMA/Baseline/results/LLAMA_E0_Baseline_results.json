@@ -1,0 +1,37 @@
+{
+  "experiment_name": "LLAMA_E0_Baseline",
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "method": "baseline",
+  "description": "Baseline TinyLlama-1.1B without fine-tuning",
+  "timestamp": "2026-02-02T23:58:20.910141",
+  "total_time_seconds": 743.9388217926025,
+  "train_results": {
+    "train_runtime": 0,
+    "train_samples_per_second": 0
+  },
+  "eval_results": {
+    "eval_loss": 2.17969012260437,
+    "eval_model_preparation_time": 0.0047,
+    "eval_runtime": 391.3729,
+    "eval_samples_per_second": 1.278,
+    "eval_steps_per_second": 1.278,
+    "eval_rouge1": 0.22432827576588604,
+    "eval_rouge2": 0.0753054591562334,
+    "eval_rougeL": 0.173852675509712
+  },
+  "energy_consumption": {
+    "emissions_kg": 5.207200701247203e-05,
+    "energy_consumed_kwh": 0.013225123632671911
+  },
+  "gpu_info": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008
+  },
+  "model_parameters": {
+    "total_params": 1100048384,
+    "trainable_params": 1100048384
+  },
+  "duration_minutes": 12.398980363210041,
+  "completion_time": "2026-02-02T23:58:20.910141"
+}

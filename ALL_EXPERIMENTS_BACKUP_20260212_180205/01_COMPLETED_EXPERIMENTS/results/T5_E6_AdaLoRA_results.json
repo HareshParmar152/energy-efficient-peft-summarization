@@ -1,0 +1,60 @@
+{
+  "experiment_name": "T5_E6_AdaLoRA",
+  "model": "t5-base",
+  "method": "lora",
+  "description": "T5-Base with Adaptive LoRA (using standard LoRA)",
+  "timestamp": "2026-02-01T16:09:01.402382",
+  "total_time_seconds": 19676.25288271904,
+  "train_results": [
+    1875,
+    12.967226432291667,
+    {
+      "train_runtime": 19091.2603,
+      "train_samples_per_second": 1.571,
+      "train_steps_per_second": 0.098,
+      "total_flos": 1.843507146877747e+16,
+      "train_loss": 12.967226432291667,
+      "epoch": 3.0
+    }
+  ],
+  "eval_results": {
+    "eval_loss": 1.7989704608917236,
+    "eval_runtime": 257.8056,
+    "eval_samples_per_second": 3.879,
+    "eval_steps_per_second": 3.879,
+    "epoch": 3.0,
+    "eval_rouge1": 0.33068650663165167,
+    "eval_rouge2": 0.1404855285190608,
+    "eval_rougeL": 0.24938783804601322
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.25699779533435124,
+    "energy_consumed_kwh": 0.3602229130851062
+  },
+  "gpu_info": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008
+  },
+  "model_parameters": {
+    "total_params": 226442496,
+    "trainable_params": 3538944
+  },
+  "peft_config": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q",
+      "v",
+      "k",
+      "o"
+    ],
+    "lora_dropout": 0.1,
+    "bias": "none",
+    "task_type": "SEQ_2_SEQ_LM"
+  },
+  "duration_minutes": 327.9375480453173,
+  "completion_time": "2026-02-01T16:09:01.402382",
+  "data_source": "migrated_from_backup",
+  "migration_timestamp": "2026-02-03T17:29:48.841445"
+}

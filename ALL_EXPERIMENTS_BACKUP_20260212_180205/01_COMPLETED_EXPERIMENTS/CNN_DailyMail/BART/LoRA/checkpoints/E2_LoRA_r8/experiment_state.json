@@ -1,0 +1,12 @@
+{
+  "experiment_name": "E2_LoRA_r8",
+  "timestamp": "2026-01-29T14:00:28.834100",
+  "training_step": 1870,
+  "epoch": 2.992,
+  "metrics": {
+    "loss": 0
+  },
+  "status": "completed",
+  "resume_checkpoint": null,
+  "completion_time": "2026-01-29T14:00:54.246503"
+}

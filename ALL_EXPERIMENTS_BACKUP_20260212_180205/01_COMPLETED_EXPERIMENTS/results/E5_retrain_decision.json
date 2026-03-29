@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-02-07T19:18:28.843189",
+  "reason": "E5 Full Finetune failed with ROUGE < 0.1",
+  "original_rouge1": 0.0299,
+  "action": "Retraining with fixed hyperparameters",
+  "changes": [
+    "Learning rate: 1e-5 \u2192 5e-6",
+    "Warmup steps: 100 \u2192 500",
+    "Max grad norm: 0.5 \u2192 0.3",
+    "Metric for best model: eval_loss \u2192 rouge1",
+    "Added: weight_decay=0.01, fp16=True"
+  ]
+}

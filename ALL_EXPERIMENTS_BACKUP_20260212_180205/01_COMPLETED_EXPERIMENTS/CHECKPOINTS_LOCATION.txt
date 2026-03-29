@@ -1,0 +1,5 @@
+Checkpoints are located in the main project folder:
+E:\Energy-Efficient Project\Energy_Efficient_Project\checkpoints
+
+To save space, checkpoints are not copied to backup.
+They remain in the original location.

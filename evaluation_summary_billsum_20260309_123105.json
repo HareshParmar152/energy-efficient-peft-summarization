@@ -1,0 +1,62 @@
+[
+  {
+    "experiment_id": "E1",
+    "dataset": "BillSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "LoRA",
+    "num_samples": 3269,
+    "rouge_scores": {
+      "rouge1": 0.4007145663947873,
+      "rouge2": 0.23336174304318913,
+      "rougeL": 0.30402166572050626,
+      "rougeLsum": 0.33472442957010273
+    },
+    "timestamp": "20260309_123105"
+  },
+  {
+    "experiment_id": "E3",
+    "dataset": "BillSum",
+    "model": "facebook/bart-base",
+    "model_type": "bart",
+    "method": "Adapters",
+    "num_samples": 3269,
+    "rouge_scores": {
+      "rouge1": 0.43031924840347935,
+      "rouge2": 0.24596355991955843,
+      "rougeL": 0.3185092437844427,
+      "rougeLsum": 0.357305741527836
+    },
+    "timestamp": "20260309_123105"
+  },
+  {
+    "experiment_id": "E13",
+    "dataset": "BillSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "LoRA",
+    "num_samples": 3269,
+    "rouge_scores": {
+      "rouge1": 0.4589038367587799,
+      "rouge2": 0.28374223443831603,
+      "rougeL": 0.35447784852538516,
+      "rougeLsum": 0.38474174266742434
+    },
+    "timestamp": "20260309_123105"
+  },
+  {
+    "experiment_id": "E15",
+    "dataset": "BillSum",
+    "model": "t5-base",
+    "model_type": "t5",
+    "method": "Adapters",
+    "num_samples": 3269,
+    "rouge_scores": {
+      "rouge1": 0.460772962020394,
+      "rouge2": 0.2931686862557856,
+      "rougeL": 0.3601583293032598,
+      "rougeLsum": 0.3892982480725412
+    },
+    "timestamp": "20260309_123105"
+  }
+]

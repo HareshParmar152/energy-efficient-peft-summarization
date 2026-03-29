@@ -1,0 +1,6 @@
+{
+  "experiment_name": "T5_E3_LoRA_r16",
+  "status": "failed",
+  "error": "--load_best_model_at_end requires the saving steps to be a round multiple of the evaluation steps, but found 100, which is not a round multiple of 500.",
+  "timestamp": "2026-01-31T11:58:16.517947"
+}

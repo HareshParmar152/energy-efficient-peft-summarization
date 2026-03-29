@@ -1,0 +1,72 @@
+{
+  "experiment_name": "E7_QLoRA",
+  "experiment_config": {
+    "name": "E7_GPU_BART_QLoRA",
+    "description": "BART-406M with Quantized LoRA",
+    "method": "qlora",
+    "lora_config": {
+      "r": 16,
+      "lora_alpha": 32,
+      "target_modules": [
+        "q_proj",
+        "v_proj",
+        "k_proj",
+        "out_proj"
+      ],
+      "lora_dropout": 0.1,
+      "bias": "none",
+      "task_type": "SEQ_2_SEQ_LM"
+    },
+    "quantization_config": {
+      "load_in_4bit": true,
+      "bnb_4bit_compute_dtype": "float16",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_quant_type": "nf4"
+    },
+    "training_args": {
+      "per_device_train_batch_size": 2,
+      "per_device_eval_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 0.0002,
+      "num_train_epochs": 3,
+      "warmup_steps": 500,
+      "logging_steps": 50,
+      "save_steps": 500,
+      "eval_steps": 500,
+      "save_total_limit": 2,
+      "load_best_model_at_end": true,
+      "metric_for_best_model": "eval_loss",
+      "greater_is_better": false,
+      "eval_strategy": "steps",
+      "save_strategy": "steps",
+      "report_to": "none",
+      "dataloader_drop_last": true,
+      "remove_unused_columns": false,
+      "prediction_loss_only": true,
+      "eval_accumulation_steps": 4
+    }
+  },
+  "evaluation_results": {
+    "eval_loss": 2.0696985721588135,
+    "eval_rouge1": 0.5624369039604407,
+    "eval_rouge2": 0.27175025324542984,
+    "eval_rougeL": 0.5212170966666267,
+    "eval_runtime": 10.5701,
+    "eval_samples_per_second": 4.73,
+    "eval_steps_per_second": 4.73,
+    "epoch": 3.0
+  },
+  "energy_consumption": {
+    "emissions_kg": 0.07256971967763134,
+    "duration_seconds": 5628.298878192902
+  },
+  "system_info": {
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "gpu_memory_gb": 4.294443008,
+    "cpu_count": 12,
+    "ram_gb": 0
+  },
+  "timestamp": "2026-01-30T09:30:29.648188",
+  "duration_minutes": 93.80498130321503,
+  "resumed_from_checkpoint": false
+}

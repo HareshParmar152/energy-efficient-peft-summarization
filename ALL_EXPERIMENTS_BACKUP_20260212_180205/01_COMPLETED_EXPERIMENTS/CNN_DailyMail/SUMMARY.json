@@ -1,0 +1,98 @@
+{
+  "dataset": "cnn_dailymail",
+  "total_experiments": 9,
+  "completed": 9,
+  "models": [
+    "BART",
+    "T5",
+    "LLAMA"
+  ],
+  "methods": [
+    "LoRA",
+    "QLoRA",
+    "Adapters"
+  ],
+  "experiments": [
+    {
+      "name": "BART_cnn_dailymail_LoRA",
+      "model": "BART",
+      "method": "LoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "BART/checkpoints/BART_cnn_dailymail_LoRA/",
+      "results": "BART/results/BART_cnn_dailymail_LoRA_results.json"
+    },
+    {
+      "name": "BART_cnn_dailymail_QLoRA",
+      "model": "BART",
+      "method": "QLoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "BART/checkpoints/BART_cnn_dailymail_QLoRA/",
+      "results": "BART/results/BART_cnn_dailymail_QLoRA_results.json"
+    },
+    {
+      "name": "BART_cnn_dailymail_Adapters",
+      "model": "BART",
+      "method": "Adapters",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "BART/checkpoints/BART_cnn_dailymail_Adapters/",
+      "results": "BART/results/BART_cnn_dailymail_Adapters_results.json"
+    },
+    {
+      "name": "T5_cnn_dailymail_LoRA",
+      "model": "T5",
+      "method": "LoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "T5/checkpoints/T5_cnn_dailymail_LoRA/",
+      "results": "T5/results/T5_cnn_dailymail_LoRA_results.json"
+    },
+    {
+      "name": "T5_cnn_dailymail_QLoRA",
+      "model": "T5",
+      "method": "QLoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "T5/checkpoints/T5_cnn_dailymail_QLoRA/",
+      "results": "T5/results/T5_cnn_dailymail_QLoRA_results.json"
+    },
+    {
+      "name": "T5_cnn_dailymail_Adapters",
+      "model": "T5",
+      "method": "Adapters",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "T5/checkpoints/T5_cnn_dailymail_Adapters/",
+      "results": "T5/results/T5_cnn_dailymail_Adapters_results.json"
+    },
+    {
+      "name": "LLAMA_cnn_dailymail_LoRA",
+      "model": "LLAMA",
+      "method": "LoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "LLAMA/checkpoints/LLAMA_cnn_dailymail_LoRA/",
+      "results": "LLAMA/results/LLAMA_cnn_dailymail_LoRA_results.json"
+    },
+    {
+      "name": "LLAMA_cnn_dailymail_QLoRA",
+      "model": "LLAMA",
+      "method": "QLoRA",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "LLAMA/checkpoints/LLAMA_cnn_dailymail_QLoRA/",
+      "results": "LLAMA/results/LLAMA_cnn_dailymail_QLoRA_results.json"
+    },
+    {
+      "name": "LLAMA_cnn_dailymail_Adapters",
+      "model": "LLAMA",
+      "method": "Adapters",
+      "dataset": "cnn_dailymail",
+      "status": "completed",
+      "checkpoint": "LLAMA/checkpoints/LLAMA_cnn_dailymail_Adapters/",
+      "results": "LLAMA/results/LLAMA_cnn_dailymail_Adapters_results.json"
+    }
+  ]
+}

@@ -7,9 +7,7 @@ __pycache__/
 dist/
 build/
 
-# Large model checkpoints (upload to Google Drive instead)
-ALL_EXPERIMENTS_BACKUP_*/
-**/checkpoints/
+# Large binary model files (too large for GitHub)
 **/optimizer.pt
 **/rng_state.pth
 **/scaler.pt
@@ -18,6 +16,9 @@ ALL_EXPERIMENTS_BACKUP_*/
 **/*.safetensors
 **/*.pt
 **/*.bin
+
+# Credentials - never commit
+google_sheets_credentials.json
 
 # Logs noise
 *.log
