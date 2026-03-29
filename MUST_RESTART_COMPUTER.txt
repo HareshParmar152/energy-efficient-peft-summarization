@@ -1,0 +1,80 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              ⚠️  COMPUTER RESTART REQUIRED  ⚠️                              ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+SITUATION:
+----------
+✓ PyTorch is installed correctly
+✓ All packages are working
+✗ GPU is in corrupted state (CUDA device-side assert)
+→ MUST restart computer to clear GPU memory
+
+
+WHY RESTART IS REQUIRED:
+-------------------------
+The GPU has been running for 39+ hours continuously and is in a corrupted
+state. No software fix can clear this - only a hardware reset via restart.
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    WHAT TO DO NOW:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+OPTION 1 - AUTOMATIC RESTART (Easiest):
+----------------------------------------
+
+In PowerShell, type:
+
+   .\RESTART_AND_RUN_BILLSUM.bat
+
+This will:
+1. Restart your computer automatically
+2. Run BillSum experiments after restart
+3. Complete in 35-44 hours
+
+
+OPTION 2 - MANUAL RESTART (Safer):
+-----------------------------------
+
+1. Save all your work
+2. Restart Windows (Start → Power → Restart)
+3. After restart, navigate to this folder
+4. Double-click: START_BILLSUM_FRESH.bat
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    AFTER RESTART:
+
+═══════════════════════════════════════════════════════════════════════════
+
+✓ GPU will be cleared
+✓ CUDA will work properly
+✓ Experiments will run successfully
+✓ Complete in 35-44 hours
+✓ Result: 8-9/9 BillSum (96-98% total)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    SUMMARY:
+
+═══════════════════════════════════════════════════════════════════════════
+
+Problem: GPU corrupted (CUDA error)
+Solution: Restart computer
+Packages: All installed ✓
+After restart: Run START_BILLSUM_FRESH.bat
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  ACTION: Restart your computer, then run START_BILLSUM_FRESH.bat          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,60 @@
+╔════════════════════════════════════════════════════════════════╗
+║                   EVALUATION PHASE - START HERE                ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 WHAT YOU'RE EVALUATING:
+   • PubMed: 9 experiments
+   • XSum: 8 experiments  
+   • SAMSum: 9 experiments
+   • BillSum: 4 experiments
+   • Total: 30 experiments
+   • Time: 3-5 hours
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 STEP 1: TEST FIRST (Recommended)
+   
+   Run this command:
+   .\TEST_EVALUATION.bat
+   
+   This tests 1 experiment with 10 samples (1-2 minutes)
+   Verifies everything works before full run
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP 2: RUN FULL EVALUATION
+   
+   Run this command:
+   .\RUN_EVALUATION_ALL.bat
+   
+   This evaluates all 30 experiments (3-5 hours)
+   Generates ROUGE scores for your paper
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 OUTPUT FILES:
+   
+   Individual results:
+   E:/Pending Experiment data/[Dataset]_Experiments/evaluation_results/
+   
+   Master summary:
+   evaluation_summary_all_[timestamp].json
+   
+   Log file:
+   evaluation_all_[timestamp].log
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 DETAILED GUIDE:
+   Read EVALUATION_GUIDE.md for complete instructions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ READY TO START!
+   1. Open PowerShell in this folder
+   2. Run: .\TEST_EVALUATION.bat
+   3. If test passes, run: .\RUN_EVALUATION_ALL.bat
+   4. Wait 3-5 hours
+   5. Check results files
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

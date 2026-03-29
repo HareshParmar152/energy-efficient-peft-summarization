@@ -1,0 +1,57 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║              ⚠️  STOP AND RESTART EVALUATION ⚠️                ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+GOOD NEWS:
+✅ Installation worked!
+✅ Evaluation started!
+✅ BillSum E1 is running (36% complete)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM FOUND:
+❌ Script has wrong checkpoint paths
+❌ Will fail on 29 out of 30 experiments
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHAT I FIXED:
+✅ Checkpoint paths now point to final_model subdirectory
+✅ SAMSum dataset name corrected (Samsung/samsum → samsum)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ACTION REQUIRED:
+
+1. Go to PowerShell window running evaluation
+
+2. Press Ctrl+C to stop it
+
+3. Run the fixed version:
+   .\RUN_EVALUATION_ALL.bat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEW TIMELINE:
+⏱️  Per experiment: 30-40 minutes
+⏱️  Total (30 experiments): 15-20 hours
+
+(Longer than expected, but this is normal for 1000 samples per experiment)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WHY RESTART?
+Current run will waste time failing on 29 experiments.
+Better to restart now with correct paths.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEPS:
+1. Ctrl+C in PowerShell
+2. .\RUN_EVALUATION_ALL.bat
+3. Wait 15-20 hours
+4. Get ROUGE scores!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,61 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    EXPERIMENT STATUS - RIGHT NOW                           ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+TOTAL: 39/45 experiments complete (87%)
+
+
+BY DATASET:
+-----------
+
+✅ PubMed:        11/9  (122%) - OVER-COMPLETE!
+✅ SAMSum:         9/9  (100%) - COMPLETE
+✅ XSum:           8/9  (89%)  - Nearly complete (missing E26)
+✅ CNN/DailyMail:  9/9  (100%) - COMPLETE (in backup)
+⚠️  BillSum:       4/9  (44%)  - NEEDS RETRY
+
+
+MISSING EXPERIMENTS:
+--------------------
+
+BillSum (5 experiments):
+  ❌ E2:  BART QLoRA
+  ❌ E14: T5 QLoRA
+  ❌ E25: GPT-2 LoRA
+  ❌ E26: GPT-2 QLoRA
+  ❌ E27: GPT-2 Adapters
+
+XSum (1 experiment):
+  ❌ E26: GPT-2 QLoRA (OOM - can skip)
+
+
+WHAT TO DO:
+-----------
+
+Restart computer and run BillSum experiments:
+
+   .\RESTART_AND_RUN_BILLSUM.bat
+
+This will:
+  → Restart computer (clears GPU)
+  → Auto-run BillSum experiments
+  → Complete 5 missing experiments
+  → Take 35-44 hours
+
+
+AFTER COMPLETION:
+-----------------
+
+Total: 43-44/45 (96-98%)
+Status: Ready for evaluation phase
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+CURRENT:  39/45 (87%) ✅
+AFTER:    44/45 (98%) ✅
+
+═══════════════════════════════════════════════════════════════════════════

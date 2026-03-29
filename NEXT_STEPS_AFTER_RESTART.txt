@@ -1,0 +1,143 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                  NEXT STEPS AFTER RESTART                                  ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+RESTART IS DONE ✓
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    STEP 1: WAIT 30 SECONDS
+
+═══════════════════════════════════════════════════════════════════════════
+
+After you login to Windows, wait 30 seconds.
+
+A command window should open AUTOMATICALLY with title:
+   "BillSum Experiments" or similar
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    STEP 2: VERIFY IT STARTED
+
+═══════════════════════════════════════════════════════════════════════════
+
+Look for the command window. You should see:
+
+   ================================================================================
+   BILLSUM ALL 9 EXPERIMENTS - 2000 STEPS
+   ================================================================================
+   ✓ CUDA reset successful at script start
+   
+   Skipping E1 - already completed
+   Skipping E3 - already completed
+   Skipping E13 - already completed
+   Skipping E15 - already completed
+   
+   STARTING EXPERIMENT: E25
+   Training...
+   Step 50/2000 (2.5%) | Speed: 0.45 steps/s | ETA: 72 min
+
+
+IF YOU SEE THIS: ✓ Everything is working! Go to Step 3.
+
+IF YOU DON'T SEE THIS: Go to "Manual Start" section below.
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    STEP 3: LET IT RUN
+
+═══════════════════════════════════════════════════════════════════════════
+
+✓ DO NOT close the command window
+✓ Let it run for 35-44 hours
+✓ You can use your computer normally
+✓ Check progress occasionally (see monitoring section)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    STEP 4: WAIT FOR COMPLETION
+
+═══════════════════════════════════════════════════════════════════════════
+
+The experiments will run through:
+   1. E25: GPT-2 LoRA (~8-10 hours)
+   2. E27: GPT-2 Adapters (~10-12 hours)
+   3. E2: BART QLoRA (~3-4 hours)
+   4. E14: T5 QLoRA (~6-8 hours)
+   5. E26: GPT-2 QLoRA (~8-10 hours)
+
+Total: 35-44 hours
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    STEP 5: VERIFY COMPLETION
+
+═══════════════════════════════════════════════════════════════════════════
+
+After 35-44 hours, check:
+
+   dir "E:\Pending Experiment data\BillSum_Experiments" /s | findstr "results.json"
+
+You should see 8-9 result files (4 old + 4-5 new).
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    IF WINDOW DOESN'T OPEN AUTOMATICALLY:
+
+═══════════════════════════════════════════════════════════════════════════
+
+Wait 2-3 minutes after restart. If no window appears:
+
+MANUAL START:
+1. Open File Explorer
+2. Navigate to: E:\Energy-Efficient Project\Energy_Efficient_Project
+3. Double-click: START_BILLSUM_FRESH.bat
+
+This will start the experiments manually.
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    MONITORING PROGRESS:
+
+═══════════════════════════════════════════════════════════════════════════
+
+Check completed experiments:
+   dir "E:\Pending Experiment data\BillSum_Experiments" /s | findstr "results.json"
+
+Check GPU usage:
+   nvidia-smi
+
+View latest log:
+   dir "E:\Pending Experiment data\BillSum_Experiments\logs" /o-d
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    QUICK CHECKLIST:
+
+═══════════════════════════════════════════════════════════════════════════
+
+After restart:
+□ Login to Windows
+□ Wait 30 seconds
+□ Look for command window opening automatically
+□ Verify "Training..." messages appear
+□ Let it run for 35-44 hours
+□ Check results after completion
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  NEXT: Wait 30 seconds, verify window opens, let it run 35-44 hours       ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

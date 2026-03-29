@@ -1,0 +1,87 @@
+================================================================================
+TINYLLAMA EXPERIMENTS - QUICK START GUIDE
+================================================================================
+
+STATUS: ✅ READY TO RUN (All issues fixed)
+
+--------------------------------------------------------------------------------
+TO START EXPERIMENTS:
+--------------------------------------------------------------------------------
+
+Double-click this file:
+    RUN_LLAMA_EXPERIMENTS.bat
+
+Or run in terminal:
+    C:\Users\hares\AppData\Local\Programs\Python\Python313\python.exe run_xsum_llama_experiments_2000steps.py
+
+--------------------------------------------------------------------------------
+WHAT WILL RUN:
+--------------------------------------------------------------------------------
+
+3 Experiments (sequential):
+    E25: TinyLlama + LoRA      (~1-1.5 hours)
+    E26: TinyLlama + QLoRA     (~1.5-2 hours)
+    E27: TinyLlama + Adapters  (~2-2.5 hours)
+
+Total Time: ~5-6 hours
+
+--------------------------------------------------------------------------------
+FIRST RUN:
+--------------------------------------------------------------------------------
+
+Model download: ~5-10 minutes (4.4GB)
+Dataset download: ~2-3 minutes
+Then training starts automatically
+
+--------------------------------------------------------------------------------
+WHAT WAS FIXED:
+--------------------------------------------------------------------------------
+
+✅ Issue 1: Renamed "LLaMA" to "TinyLlama" everywhere
+✅ Issue 2: Fixed PyTorch import (using system Python)
+✅ Issue 3: Applied 4-bit quantization (fits in 4GB GPU)
+✅ Issue 4: Fixed padding/batching errors
+
+--------------------------------------------------------------------------------
+RESULTS LOCATION:
+--------------------------------------------------------------------------------
+
+E:\Pending Experiment data\XSum_Experiments\TinyLlama\
+    ├── checkpoints/  (model checkpoints every 500 steps)
+    ├── results/      (JSON files with metrics)
+    └── logs/         (detailed training logs)
+
+--------------------------------------------------------------------------------
+MONITORING:
+--------------------------------------------------------------------------------
+
+Console: Shows progress every 50 steps
+GPU: Run "nvidia-smi" in another terminal
+Logs: Check E:\Pending Experiment data\XSum_Experiments\logs\
+
+--------------------------------------------------------------------------------
+IMPORTANT:
+--------------------------------------------------------------------------------
+
+⚠️ DO NOT close the console window during training
+⚠️ First run downloads model (~5-10 min) - be patient
+⚠️ Experiments run one after another (sequential)
+⚠️ GPU will be at 80-100% usage (normal)
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING:
+--------------------------------------------------------------------------------
+
+If stuck: Check log file for errors
+If memory error: Close other GPU applications and restart
+If slow: First run downloads model, subsequent runs are faster
+
+--------------------------------------------------------------------------------
+READY TO GO!
+--------------------------------------------------------------------------------
+
+Just run: RUN_LLAMA_EXPERIMENTS.bat
+
+Good luck! 🚀
+
+================================================================================

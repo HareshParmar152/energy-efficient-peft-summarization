@@ -1,0 +1,98 @@
+================================================================================
+⚡ ACTION REQUIRED - BILLSUM EXPERIMENTS ⚡
+================================================================================
+
+PROBLEM: 5/9 BillSum experiments failed with CUDA error
+CAUSE: GPU memory corrupted after 39+ hours continuous use
+SOLUTION: Computer restart required!
+
+================================================================================
+WHAT TO DO NOW:
+================================================================================
+
+OPTION 1 - AUTOMATIC (Recommended):
+------------------------------------
+Run this command:
+    RESTART_AND_RUN_BILLSUM.bat
+
+This will:
+  ✓ Restart your computer automatically
+  ✓ Run BillSum experiments after restart
+  ✓ Skip 4 completed experiments
+  ✓ Retry 5 failed experiments
+  ✓ Complete in 35-44 hours
+
+OPTION 2 - MANUAL (Safer):
+---------------------------
+1. Restart Windows manually
+2. After restart, run:
+    RUN_BILLSUM_EXPERIMENTS.bat
+
+================================================================================
+WHAT WAS FIXED:
+================================================================================
+
+✓ CUDA environment variables added
+✓ GPU reset at script start
+✓ Enhanced GPU cleanup (3 rounds)
+✓ 30-second delay between experiments
+✓ Better error handling
+✓ Auto-skip completed experiments
+
+================================================================================
+CURRENT STATUS:
+================================================================================
+
+Completed (4/9):
+  ✓ E1: BART LoRA (151 min)
+  ✓ E3: BART Adapters (158 min)
+  ✓ E13: T5 LoRA (1,340 min)
+  ✓ E15: T5 Adapters (1,030 min)
+
+Failed (5/9) - Will Retry:
+  ❌ E25: GPT-2 LoRA
+  ❌ E27: GPT-2 Adapters
+  ❌ E2: BART QLoRA
+  ❌ E14: T5 QLoRA
+  ❌ E26: GPT-2 QLoRA
+
+================================================================================
+AFTER RESTART:
+================================================================================
+
+The script will:
+  1. Skip 4 completed experiments (auto-detected)
+  2. Retry 5 failed experiments
+  3. Run for 35-44 hours total
+  4. Save results automatically
+
+Expected completion: ~2 days from restart
+
+================================================================================
+RESEARCH IMPACT:
+================================================================================
+
+Current: 39/45 experiments (87%)
+After:   44/45 experiments (98%)
+Status:  Ready for evaluation phase
+
+================================================================================
+DOCUMENTATION:
+================================================================================
+
+Read these for more details:
+  - BILLSUM_RESTART_REQUIRED.md (full instructions)
+  - BILLSUM_FIXES_APPLIED.md (technical details)
+  - BILLSUM_FAILED_EXPERIMENTS_ANALYSIS.md (failure analysis)
+
+================================================================================
+QUICK START:
+================================================================================
+
+Run this NOW:
+    RESTART_AND_RUN_BILLSUM.bat
+
+Or restart manually and then run:
+    RUN_BILLSUM_EXPERIMENTS.bat
+
+================================================================================

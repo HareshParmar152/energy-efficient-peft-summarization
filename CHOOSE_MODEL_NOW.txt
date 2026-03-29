@@ -1,0 +1,61 @@
+================================================================================
+CHOOSE DECODER-ONLY MODEL FOR YOUR EXPERIMENTS
+================================================================================
+
+You want a LLaMA-like model that WORKS on 4GB GPU.
+
+LLaMA-2-7B: TOO BIG ❌
+TinyLlama-1.1B: TOO SLOW (22+ hours) ❌
+
+================================================================================
+WORKING ALTERNATIVES (Decoder-Only Models):
+================================================================================
+
+OPTION 1: OPT-1.3B (facebook/opt-1.3b)
+    Size: 1.3B parameters
+    Memory: ~1.2GB (4-bit)
+    Speed: 2-3 hours per experiment
+    Quality: Good
+    Status: ✅ WILL WORK
+
+OPTION 2: OPT-350M (facebook/opt-350m)
+    Size: 350M parameters
+    Memory: ~0.5GB (4-bit)
+    Speed: 1-2 hours per experiment
+    Quality: Decent (smaller model)
+    Status: ✅ WILL DEFINITELY WORK
+
+OPTION 3: Keep trying TinyLlama-1.1B with optimizations
+    Size: 1.1B parameters
+    Memory: ~2.5GB (4-bit)
+    Speed: Still slow (maybe 10-15 hours with optimizations)
+    Status: ⚠️ MIGHT WORK BUT SLOW
+
+================================================================================
+MY RECOMMENDATION: OPT-1.3B
+================================================================================
+
+Why OPT-1.3B?
+- ✓ Same company as LLaMA (Meta/Facebook)
+- ✓ Decoder-only architecture (like LLaMA)
+- ✓ Similar size to TinyLlama (1.3B vs 1.1B)
+- ✓ Will work fast on 4GB GPU
+- ✓ Used in research for summarization
+- ✓ No more failures!
+
+Research justification:
+"We use OPT-1.3B as the decoder-only model, which shares similar 
+architecture with LLaMA and is from the same organization (Meta/Facebook)."
+
+================================================================================
+TELL ME YOUR CHOICE:
+================================================================================
+
+Reply with:
+1 = Use OPT-1.3B (recommended, similar to TinyLlama size)
+2 = Use OPT-350M (smaller, faster, guaranteed)
+3 = Keep trying TinyLlama with optimizations (risky, slow)
+
+I'll update the script immediately!
+
+================================================================================

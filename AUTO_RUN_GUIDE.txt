@@ -1,0 +1,104 @@
+================================================================================
+AUTO-RUN BATCH SCRIPTS CREATED
+================================================================================
+
+You now have batch scripts to automatically chain experiments together!
+
+================================================================================
+OPTION 1: Run E27 then XSum E26 (2 experiments)
+================================================================================
+
+FILE: run_e27_then_xsum_e26.bat
+
+WHAT IT DOES:
+1. Runs train_billsum_e27.py (GPT-2 Adapters)
+2. Waits for completion
+3. Automatically runs train_xsum_e26.py (GPT-2 QLoRA)
+
+HOW TO USE:
+Double-click: run_e27_then_xsum_e26.bat
+
+OR in PowerShell:
+.\run_e27_then_xsum_e26.bat
+
+ESTIMATED TIME: 3-5 hours total
+
+================================================================================
+OPTION 2: Run All Remaining 4 Experiments
+================================================================================
+
+FILE: run_remaining_4_experiments.bat
+
+WHAT IT DOES:
+1. E27 - BillSum GPT-2 Adapters (EASY)
+2. E26 - XSum GPT-2 QLoRA (MEDIUM)
+3. E2  - BillSum BART QLoRA (HARD)
+4. E14 - BillSum T5 QLoRA (HARD)
+
+HOW TO USE:
+Double-click: run_remaining_4_experiments.bat
+
+OR in PowerShell:
+.\run_remaining_4_experiments.bat
+
+ESTIMATED TIME: 6-10 hours total
+
+================================================================================
+WHAT HAPPENS IF ONE FAILS?
+================================================================================
+
+The batch script will:
+1. Continue to the next experiment
+2. Save failure JSON for the failed experiment
+3. Complete all remaining experiments
+
+You can check which succeeded/failed by looking at the results JSON files.
+
+================================================================================
+CURRENT STATUS (Based on your message)
+================================================================================
+
+✅ E25 - DONE (already completed)
+🔄 E27 - RUNNING NOW
+⏳ XSum E26 - Waiting (will auto-start after E27)
+⏳ E2 - Pending
+⏳ E14 - Pending
+⏳ BillSum E26 - Pending (hardest, optional)
+
+================================================================================
+RECOMMENDED APPROACH
+================================================================================
+
+Since E27 is already running:
+
+OPTION A: Let E27 finish, then manually run:
+python train_xsum_e26.py
+
+OPTION B: After E27 finishes, run the batch script for remaining 3:
+Create a new batch file for E26 (XSum), E2, E14
+
+OPTION C: Use the run_remaining_4_experiments.bat for future runs
+
+================================================================================
+MONITORING PROGRESS
+================================================================================
+
+While experiments run, you can check:
+
+1. Terminal output - shows training progress
+2. Results JSON files - created after completion
+3. Checkpoint directories - models saved during training
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Wait for E27 to complete
+2. Run: python train_xsum_e26.py
+3. Then decide if you want to run E2 and E14
+
+OR
+
+Use the batch scripts for automatic chaining!
+
+================================================================================

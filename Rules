@@ -1,0 +1,96 @@
+PENDING EXPERIMENTS (REFERENCE BY EXPERIMENT ID)
+=====================================================
+
+NOTE:
+• CNN/DailyMail experiments are COMPLETED and excluded
+• All experiments below are PENDING
+• Refer to any experiment ONLY by its Experiment ID (E#)
+
+-----------------------------------------------------
+BART – Encoder–Decoder Model
+-----------------------------------------------------
+
+E1  : BART | xsum        | LoRA
+E2  : BART | xsum        | QLoRA
+E3  : BART | xsum        | Adapters
+
+E4  : BART | PubMed     | LoRA
+E5  : BART | PubMed     | QLoRA
+E6  : BART | PubMed     | Adapters
+
+E7  : BART | Multi-News | LoRA
+E8  : BART | Multi-News | QLoRA
+E9  : BART | Multi-News | Adapters
+
+E10 : BART | Newsroom   | LoRA
+E11 : BART | Newsroom   | QLoRA
+E12 : BART | Newsroom   | Adapters
+
+-----------------------------------------------------
+T5 – Text-to-Text Transformer
+-----------------------------------------------------
+
+E13 : T5 | xsum        | LoRA
+E14 : T5 | xsum        | QLoRA
+E15 : T5 | xsum        | Adapters
+
+E16 : T5 | PubMed     | LoRA
+E17 : T5 | PubMed     | QLoRA
+E18 : T5 | PubMed     | Adapters
+
+E19 : T5 | Multi-News | LoRA
+E20 : T5 | Multi-News | QLoRA
+E21 : T5 | Multi-News | Adapters
+
+E22 : T5 | Newsroom   | LoRA
+E23 : T5 | Newsroom   | QLoRA
+E24 : T5 | Newsroom   | Adapters
+
+-----------------------------------------------------
+GPT-2 – Decoder-Only Model (Replacing LLaMA)
+-----------------------------------------------------
+
+E25 : GPT-2 | xsum        | LoRA
+E26 : GPT-2 | xsum        | QLoRA
+E27 : GPT-2 | xsum        | Adapters
+
+E28 : GPT-2 | PubMed     | LoRA
+E29 : GPT-2 | PubMed     | QLoRA
+E30 : GPT-2 | PubMed     | Adapters
+
+E31 : GPT-2 | Multi-News | LoRA
+E32 : GPT-2 | Multi-News | QLoRA
+E33 : GPT-2 | Multi-News | Adapters
+
+E34 : GPT-2 | Newsroom   | LoRA
+E35 : GPT-2 | Newsroom   | QLoRA
+E36 : GPT-2 | Newsroom   | Adapters
+
+
+=====================================================
+DEFAULT PATH RULE (MANDATORY)
+=====================================================
+
+CRITICAL RULE — ALWAYS ENFORCE:
+
+Whenever you generate, suggest, or modify ANY Python script related to:
+• Experiments
+• Training
+• Evaluation
+• Energy logging
+• Result storage
+• ROUGE or CodeCarbon outputs
+
+YOU MUST:
+
+• Use the following default path for saving results:
+  E:\Pending Experiment data
+
+• Assume this path already exists
+• Do NOT ask the user where to save outputs
+• Do NOT change the directory unless explicitly instructed
+
+Example (MANDATORY BEHAVIOUR):
+- Logs → E:\Pending Experiment data\logs
+- Metrics → E:\Pending Experiment data\results
+- Models → E:\Pending Experiment data\models

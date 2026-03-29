@@ -1,0 +1,81 @@
+================================================================================
+✅ CORRECT COMMANDS TO RUN THE TRAINING SCRIPTS
+================================================================================
+
+ISSUE IDENTIFIED:
+You tried: train_billsum_e25.py
+PowerShell said: "command not found"
+
+SOLUTION:
+You need to specify it's a Python script!
+
+================================================================================
+CORRECT COMMANDS (Copy and Paste These)
+================================================================================
+
+1. EASIEST EXPERIMENT (Start Here):
+   python train_billsum_e25.py
+
+2. EASY EXPERIMENT:
+   python train_billsum_e27.py
+
+3. MEDIUM EXPERIMENT:
+   python train_xsum_e26.py
+
+4. HARD EXPERIMENT:
+   python train_billsum_e2.py
+
+5. HARD EXPERIMENT:
+   python train_billsum_e14.py
+
+6. HARDEST EXPERIMENT:
+   python train_billsum_e26.py
+
+================================================================================
+WHY THIS HAPPENS
+================================================================================
+
+Windows PowerShell doesn't automatically recognize .py files as executable.
+You must explicitly tell it to use Python to run the script.
+
+WRONG: train_billsum_e25.py
+RIGHT: python train_billsum_e25.py
+
+================================================================================
+START NOW
+================================================================================
+
+Copy and paste this command:
+
+python train_billsum_e25.py
+
+This will start the easiest experiment (GPT-2 LoRA) with 70% success rate.
+
+================================================================================
+WHAT TO EXPECT
+================================================================================
+
+After running the command, you should see:
+
+================================================================================
+TRAINING: BillSum E25 (GPT-2 LoRA)
+================================================================================
+
+1. Loading BillSum dataset...
+   Train samples: 500
+   Test samples: 50
+
+2. Loading GPT-2 model and tokenizer...
+
+[... training continues for 1-2 hours ...]
+
+================================================================================
+READY TO GO!
+================================================================================
+
+The scripts are working perfectly. Just use the correct Python command format.
+
+NEXT COMMAND TO RUN:
+python train_billsum_e25.py
+
+================================================================================

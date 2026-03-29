@@ -1,0 +1,189 @@
+================================================================================
+⚠️ CRITICAL: DATA COLLECTION MISSING FROM TRAINING SCRIPTS
+================================================================================
+Date: March 10, 2026
+Status: SCRIPTS NEED UPDATE BEFORE RUNNING ❌
+
+================================================================================
+PROBLEM IDENTIFIED
+================================================================================
+
+The 6 training scripts (train_billsum_e25.py, etc.) are MISSING critical
+research data collection features that your successful experiments have.
+
+CURRENT SCRIPTS WILL:
+✅ Train the models
+✅ Save checkpoints
+❌ NOT collect energy consumption data
+❌ NOT save training time metrics
+❌ NOT save memory usage
+❌ NOT save experiment state JSON
+❌ NOT save trainable parameters count
+❌ NOT save proper results for research paper
+
+================================================================================
+MISSING FEATURES
+================================================================================
+
+1. ❌ CodeCarbon Energy Tracking
+   - Your research measures energy efficiency
+   - Current scripts don't track emissions
+   - Need: EmissionsTracker integration
+
+2. ❌ Experiment State JSON
+   - Your research needs structured results
+   - Current scripts don't save JSON files
+   - Need: {exp_id}_results.json with all metrics
+
+3. ❌ Training Time Metrics
+   - Your research compares training efficiency
+   - Current scripts don't save timing data
+   - Need: train_runtime_seconds, train_runtime_minutes
+
+4. ❌ Parameter Counting
+   - Your research analyzes parameter efficiency
+   - Current scripts don't save parameter counts
+   - Need: trainable_parameters, total_parameters, trainable_percentage
+
+5. ❌ Memory Usage Tracking
+   - Your research considers memory constraints
+   - Current scripts don't track GPU memory
+   - Need: Peak memory usage logging
+
+6. ❌ Proper Results Directory Structure
+   - Your research has organized results
+   - Current scripts use inconsistent paths
+   - Need: ./experiments/{Dataset}/{Model}/{Method}/results/
+
+================================================================================
+WHAT YOUR SUCCESSFUL SCRIPTS COLLECT
+================================================================================
+
+From run_billsum_all_9_experiments_2000steps.py:
+
+{
+  "experiment_id": "E25",
+  "experiment_name": "E25_GPT2_LoRA",
+  "model": "gpt2-medium",
+  "model_type": "gpt2",
+  "method": "LoRA",
+  "dataset": "billsum",
+  "status": "success",
+  "timestamp": "20260310_120000",
+  "config": {...},
+  "trainable_parameters": 393216,
+  "total_parameters": 355216384,
+  "trainable_percentage": 0.1107,
+  "train_runtime_seconds": 7200,
+  "train_runtime_minutes": 120,
+  "train_loss": 2.45,
+  "train_samples_per_second": 0.42,
+  "train_steps_per_second": 0.28,
+  "emissions_kg_co2": 0.0234,
+  "checkpoint_dir": "./experiments/BillSum/GPT2/LoRA/checkpoints/E25_LoRA",
+  "results_dir": "./experiments/BillSum/GPT2/LoRA/results",
+  "note": "Legislative bill summarization - Causal LM"
+}
+
+================================================================================
+IMPACT ON YOUR RESEARCH
+================================================================================
+
+WITHOUT THIS DATA, YOU CANNOT:
+❌ Answer Research Question 1: "To what extent can PEFT methods reduce 
+   computational and energy requirements..."
+   → Need: emissions_kg_co2, train_runtime_seconds
+
+❌ Answer Research Question 3: "Does the reduction in trainable parameters 
+   achieved through PEFT approaches result in measurable energy savings?"
+   → Need: trainable_parameters, trainable_percentage, emissions_kg_co2
+
+❌ Answer Research Question 4: "What trade-offs exist between energy 
+   efficiency, training time, memory usage and model accuracy?"
+   → Need: ALL metrics (energy, time, memory, parameters)
+
+❌ Compare with your 39 completed experiments
+   → Need: Same JSON structure and metrics
+
+❌ Include in your research paper tables/figures
+   → Need: Structured data in consistent format
+
+================================================================================
+SOLUTION REQUIRED
+================================================================================
+
+OPTION 1: Update All 6 Scripts (RECOMMENDED)
+- Add CodeCarbon integration
+- Add proper results JSON saving
+- Add parameter counting
+- Add timing metrics
+- Add memory tracking
+- Estimated time: 30 minutes to update all scripts
+
+OPTION 2: Use Existing run_billsum_all_9_experiments_2000steps.py
+- Already has all data collection
+- Run only the 5 failed experiments
+- Modify to skip completed ones
+- Estimated time: 5 minutes to modify
+
+OPTION 3: Run Without Data Collection (NOT RECOMMENDED)
+- Train models but lose research data
+- Cannot compare with other experiments
+- Cannot answer research questions
+- Will need to retrain later with proper tracking
+
+================================================================================
+RECOMMENDATION
+================================================================================
+
+BEST APPROACH: Use OPTION 2
+
+Modify run_billsum_all_9_experiments_2000steps.py to:
+1. Skip E1, E3, E13, E15 (already completed)
+2. Run only E2, E14, E25, E26, E27 (failed ones)
+3. Use same script for XSum E26
+
+ADVANTAGES:
+✅ Already has all data collection
+✅ Proven to work
+✅ Consistent with your other experiments
+✅ Saves time (no script rewriting needed)
+✅ Same results format
+✅ Same directory structure
+
+DISADVANTAGES:
+❌ Runs all 5 BillSum experiments together (can't do one-by-one easily)
+
+================================================================================
+DECISION REQUIRED
+================================================================================
+
+Do you want to:
+
+A) Update the 6 individual scripts to add data collection?
+   → Allows one-by-one training
+   → Takes 30 minutes to implement
+   → Risk of missing something
+
+B) Use the existing run_billsum_all_9_experiments_2000steps.py?
+   → Already has everything
+   → Proven to work
+   → Runs multiple experiments in sequence
+   → Can modify to run only failed ones
+
+C) Proceed without data collection?
+   → NOT RECOMMENDED
+   → Will lose research data
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+PLEASE CHOOSE:
+- Type "A" to update individual scripts
+- Type "B" to use existing script (RECOMMENDED)
+- Type "C" to proceed without data collection (NOT RECOMMENDED)
+
+I will then implement your choice immediately.
+
+================================================================================

@@ -1,0 +1,160 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    AFTER RESTART - WHAT TO EXPECT                          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+YOU RAN: .\RESTART_AND_RUN_BILLSUM.bat
+RESULT: Computer will restart automatically
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    WHAT HAPPENS AFTER RESTART:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+1. COMPUTER RESTARTS
+   → Windows reboots
+   → GPU memory cleared
+   → CUDA state reset
+
+
+2. WINDOWS STARTS UP
+   → Login to Windows
+   → Wait 30 seconds
+
+
+3. EXPERIMENTS START AUTOMATICALLY (after 30 seconds)
+   → A command window opens automatically
+   → Title: "BillSum Experiments" or similar
+   → Script starts running
+   → You'll see:
+   
+     ================================================================================
+     BILLSUM ALL 9 EXPERIMENTS - 2000 STEPS
+     ================================================================================
+     ✓ CUDA reset successful at script start
+     ✓ CUDA initialized and cleared
+     
+     Loading dataset from cache...
+     
+     Skipping E1 - already completed
+     Skipping E3 - already completed
+     Skipping E13 - already completed
+     Skipping E15 - already completed
+     
+     STARTING EXPERIMENT: E25
+     Loading tokenizer and model...
+     Training...
+
+
+4. EXPERIMENTS RUN FOR 35-44 HOURS
+   → E25: GPT-2 LoRA (~8-10 hours)
+   → E27: GPT-2 Adapters (~10-12 hours)
+   → E2: BART QLoRA (~3-4 hours)
+   → E14: T5 QLoRA (~6-8 hours)
+   → E26: GPT-2 QLoRA (~8-10 hours)
+
+
+5. COMPLETION
+   → All experiments finish
+   → Results saved automatically
+   → Window shows completion message
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    IMPORTANT NOTES:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+✓ DO NOT CLOSE the command window that opens automatically
+✓ Let it run for 35-44 hours uninterrupted
+✓ You can use your computer normally while it runs
+✓ The window will stay open showing progress
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    IF WINDOW DOESN'T OPEN:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+If the command window doesn't open automatically after 30 seconds:
+
+1. Navigate to: E:\Energy-Efficient Project\Energy_Efficient_Project
+2. Double-click: START_BILLSUM_FRESH.bat
+3. This will start the experiments manually
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    MONITORING PROGRESS:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+Check completed experiments anytime:
+
+   dir "E:\Pending Experiment data\BillSum_Experiments" /s | findstr "results.json"
+
+You should see new files appearing:
+   - E25_results.json (after ~8-10 hours)
+   - E27_results.json (after ~18-22 hours)
+   - E2_results.json (after ~21-26 hours)
+   - E14_results.json (after ~27-34 hours)
+   - E26_results.json (after ~35-44 hours)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    EXPECTED TIMELINE:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+Start:    After restart + 30 seconds
+Finish:   35-44 hours later
+Result:   9/9 BillSum experiments complete
+Total:    44/45 experiments (98%)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    SUCCESS INDICATORS:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+You'll know it's working when:
+✓ Command window stays open (doesn't close)
+✓ See "Training..." messages
+✓ Progress updates every 50 steps
+✓ GPU usage is high (check with: nvidia-smi)
+✓ Each experiment runs for HOURS (not seconds)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    WHAT TO DO NOW:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+1. Save all your work in other applications
+2. Your computer will restart soon
+3. After restart, wait for the window to open automatically
+4. Let it run for 35-44 hours
+5. Check back when complete!
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  AFTER RESTART: Experiments will start automatically in 30 seconds         ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

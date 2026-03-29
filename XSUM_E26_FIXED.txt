@@ -1,0 +1,51 @@
+================================================================================
+✅ XSUM E26 SCRIPT FIXED
+================================================================================
+
+PROBLEM:
+The script was looking for XSum dataset at:
+E:/Pending Experiment data/local_datasets/xsum
+
+But XSum is NOT stored locally - it loads from Hugging Face Hub!
+
+SOLUTION APPLIED:
+Changed from:
+  dataset = load_from_disk("E:/Pending Experiment data/local_datasets/xsum")
+
+To:
+  dataset = load_dataset("xsum")
+
+================================================================================
+NOW YOU CAN RUN IT
+================================================================================
+
+python train_xsum_e26.py
+
+The script will:
+1. Download XSum from Hugging Face (if not cached)
+2. Train GPT-2 QLoRA for 2000 steps
+3. Save all research data (energy, time, parameters)
+4. Save results to: E:/Pending Experiment data/XSum_Experiments/GPT2/results/E26_results.json
+
+================================================================================
+DATASET LOCATIONS SUMMARY
+================================================================================
+
+LOCAL DATASETS (load_from_disk):
+✅ BillSum: E:/Pending Experiment data/local_datasets/billsum
+✅ SAMSum: E:/Pending Experiment data/local_datasets/samsum
+
+HUGGING FACE DATASETS (load_dataset):
+✅ XSum: load_dataset("xsum")
+✅ PubMed: load_dataset("scientific_papers", "pubmed")
+✅ CNN/DailyMail: load_dataset("cnn_dailymail", "3.0.0")
+
+================================================================================
+READY TO RUN!
+================================================================================
+
+The script is now fixed and ready to use.
+
+python train_xsum_e26.py
+
+================================================================================

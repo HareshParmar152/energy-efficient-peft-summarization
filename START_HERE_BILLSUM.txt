@@ -1,0 +1,73 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                    BILLSUM EXPERIMENTS - START HERE                        ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+SITUATION:
+----------
+✓ 4/9 BillSum experiments completed successfully
+✗ 5/9 experiments failed due to GPU memory corruption
+→ Computer restart recommended (but can try without restart first)
+
+
+WHAT TO DO:
+-----------
+
+┌─ OPTION 1: TRY WITHOUT RESTART (Quickest) ──────────────────────────────┐
+│                                                                          │
+│  Double-click this file:                                                │
+│  → START_BILLSUM_FRESH.bat                                              │
+│                                                                          │
+│  This will:                                                              │
+│  1. Open new window (no .venv interference)                              │
+│  2. Use system Python (has all packages)                                 │
+│  3. Start experiments immediately                                        │
+│  4. Complete in 35-44 hours                                              │
+│                                                                          │
+│  If this fails, use Option 2 (restart)                                   │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌─ OPTION 2: RESTART COMPUTER (Most Reliable) ────────────────────────────┐
+│                                                                          │
+│  A. Automatic restart:                                                   │
+│     → RESTART_AND_RUN_BILLSUM.bat                                        │
+│                                                                          │
+│  B. Manual restart:                                                      │
+│     1. Restart Windows                                                   │
+│     2. Double-click: START_BILLSUM_FRESH.bat                             │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+
+WHAT WILL HAPPEN:
+-----------------
+✓ Script will skip 4 completed experiments (E1, E3, E13, E15)
+✓ Script will retry 5 failed experiments (E25, E27, E2, E14, E26)
+✓ All fixes applied (GPU cleanup, error handling, delays)
+✓ Expected time: 35-44 hours (1.5-2 days)
+✓ Results saved automatically
+
+
+AFTER COMPLETION:
+-----------------
+You will have:
+→ 8-9/9 BillSum experiments complete (89-100%)
+→ 43-44/45 total experiments (96-98%)
+→ Ready for evaluation phase
+
+
+NEED MORE INFO?
+---------------
+Read these files:
+→ ACTION_REQUIRED_BILLSUM.txt (quick guide)
+→ BILLSUM_COMPLETE_SOLUTION.md (full details)
+→ BILLSUM_FIXES_APPLIED.md (technical fixes)
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  RECOMMENDED: Double-click RESTART_AND_RUN_BILLSUM.bat NOW                ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

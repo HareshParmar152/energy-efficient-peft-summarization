@@ -1,0 +1,105 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                  STOP AND RESTART EXPERIMENTS NOW                          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+NEW ERROR FOUND AND FIXED!
+---------------------------
+
+Error: GPT-2 sequence length too long (1280 > 1024)
+Fix: Limited GPT-2 to 1024 tokens (applied ✓)
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    WHAT TO DO RIGHT NOW:
+
+═══════════════════════════════════════════════════════════════════════════
+
+
+STEP 1: STOP CURRENT RUN
+-------------------------
+
+In the command window showing experiments, press:
+
+   Ctrl + C
+
+Wait for it to stop (may take a few seconds).
+
+
+STEP 2: RESTART EXPERIMENTS
+----------------------------
+
+Run ONE of these:
+
+
+A. Double-click in File Explorer (Easiest):
+   File: START_BILLSUM_FRESH.bat
+   Location: E:\Energy-Efficient Project\Energy_Efficient_Project
+
+
+B. Command Prompt:
+   cd /d "E:\Energy-Efficient Project\Energy_Efficient_Project"
+   START_BILLSUM_FRESH.bat
+
+
+C. PowerShell:
+   cd "E:\Energy-Efficient Project\Energy_Efficient_Project"
+   .\START_BILLSUM_FRESH.bat
+
+
+D. Direct Python:
+   cd /d "E:\Energy-Efficient Project\Energy_Efficient_Project"
+   python run_billsum_all_9_experiments_2000steps.py
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    WHAT WILL HAPPEN:
+
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Script loads with fix applied
+✓ Skips E1, E3, E13, E15 (already done)
+✓ Runs E25 with correct sequence length (1024 not 1280)
+✓ E25 should complete successfully in 8-10 hours
+✓ All 5 experiments complete in 35-44 hours
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    VERIFICATION:
+
+═══════════════════════════════════════════════════════════════════════════
+
+After restarting, you should see:
+
+   STARTING EXPERIMENT: E25
+   Training...
+   Step 50/2000 (2.5%) | Speed: 0.45 steps/s | ETA: 72 min
+   Step 100/2000 (5.0%) | Speed: 0.44 steps/s | ETA: 71 min
+   ...
+
+NOT:
+   [FAILED] E25 - Error: CUDA error
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    QUICK SUMMARY:
+
+═══════════════════════════════════════════════════════════════════════════
+
+Problem: Sequence too long for GPT-2
+Fix: Applied ✓
+Action: Stop (Ctrl+C) and restart (START_BILLSUM_FRESH.bat)
+Result: All 5 experiments should work now
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║  ACTION: Press Ctrl+C, then run START_BILLSUM_FRESH.bat                   ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

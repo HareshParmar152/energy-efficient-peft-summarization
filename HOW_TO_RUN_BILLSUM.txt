@@ -1,0 +1,72 @@
+================================================================================
+HOW TO RUN BILLSUM EXPERIMENTS - STEP BY STEP
+================================================================================
+
+PROBLEM: You activated .venv which doesn't have PyTorch installed
+SOLUTION: Use system Python (not .venv)
+
+================================================================================
+OPTION 1: Close PowerShell and Use Batch File (EASIEST)
+================================================================================
+
+1. Close the current PowerShell window (X button)
+
+2. Open File Explorer and navigate to:
+   E:\Energy-Efficient Project\Energy_Efficient_Project
+
+3. Double-click this file:
+   RUN_BILLSUM_FIXED.bat
+
+4. Press any key when prompted
+
+5. Let it run for 35-44 hours
+
+================================================================================
+OPTION 2: Use Current PowerShell (If you want to keep it open)
+================================================================================
+
+1. In your current PowerShell, type these commands:
+
+   deactivate
+   $env:VIRTUAL_ENV = $null
+   
+2. Then run:
+
+   python run_billsum_all_9_experiments_2000steps.py
+
+================================================================================
+OPTION 3: Test First, Then Run
+================================================================================
+
+1. Close PowerShell
+
+2. Double-click: TEST_PYTHON_SETUP.bat
+   (This verifies Python and PyTorch work)
+
+3. If test passes, double-click: RUN_BILLSUM_FIXED.bat
+
+================================================================================
+WHY THIS HAPPENS:
+================================================================================
+
+- System Python (C:\Users\hares\AppData\Local\Programs\Python\Python313\)
+  has all packages: torch, transformers, peft, etc.
+
+- .venv Python (E:\Energy-Efficient Project\Energy_Efficient_Project\.venv)
+  is empty/incomplete
+
+- You need to use system Python, not .venv
+
+================================================================================
+WHAT WILL HAPPEN:
+================================================================================
+
+✓ Script will check for completed experiments
+✓ Skip: E1, E3, E13, E15 (already done)
+✓ Retry: E25, E27, E2, E14, E26 (failed)
+✓ Run for 35-44 hours
+✓ Save results automatically
+
+================================================================================
+RECOMMENDED: Close PowerShell, double-click RUN_BILLSUM_FIXED.bat
+================================================================================

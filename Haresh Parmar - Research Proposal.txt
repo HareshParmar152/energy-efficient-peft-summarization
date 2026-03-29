@@ -1,0 +1,344 @@
+
+
+
+
+
+
+
+Energy-Efficient Generative AI Using Parameter-Efficient Fine-Tuning for Multi-Dataset Summarization
+
+
+
+Parmar Hareshbhai Dashrathbhai
+
+
+
+Research Proposal
+
+
+
+
+
+
+
+
+
+
+
+December 2025
+Abstract
+Analyzing study investigates energy-efficient fine-tuning strategies for large language models (LLMs) in the context of abstractive text summarization. As model sizes grow, traditional full-parameter fine-tuning has become increasingly costly in terms of computational resources, energy consumption and carbon emissions. Parameter-Efficient Fine-Tuning (PEFT) methods such as LoRA, QLoRA and Adapters have emerged as promising alternatives that significantly reduce the number of trainable parameters while maintaining competitive performance. However, limited research has evaluated these techniques across diverse summarization datasets or systematically analysed their environmental impact.
+Exploring research aims to benchmark LoRA, QLoRA and Adapter-based tuning across multiple transformer models—BART, T5 and LLaMA—using varied datasets including CNN/DailyMail, Reddit TIFU, PubMed, Multi-News and Newsroom. A unified experimental framework is developed to ensure fair comparisons through consistent preprocessing pipelines, controlled hyperparameters and standardised evaluation procedures. Summarization quality is assessed using ROUGE-1, ROUGE-2 and ROUGE-L metrics, while energy consumption and carbon emissions during fine-tuning are measured using CodeCarbon.
+Exploring findings are expected to provide insight into the trade-offs between model performance, energy efficiency and computational cost across heterogeneous datasets. By exploring how different PEFT methods behave under varying linguistic and structural conditions, the study aims to identify the most efficient and sustainable fine-tuning strategy for modern summarization tasks. Exploring outcomes have implications for research, industry and sustainability initiatives by highlighting low-resource approaches that reduce environmental impact while enabling high-quality generative AI systems. Analyzing research contributes to the growing field of green AI by offering practical guidance for deploying LLM-based summarization in a resource-conscious and environmentally responsible manner.
+
+
+
+
+
+
+
+
+Table of Contents
+Catalog
+Abstract	1
+1. Background	2
+2. Literature Review	3
+2.1 Large Language Models and Text Summarization	3
+2.2 Parameter-Efficient Fine-Tuning (PEFT) Methods	3
+2.3 Energy-Efficient AI and Carbon Accounting Tools	3
+2.4 Multi-Dataset Benchmarking in Summarization	4
+2.5 Identified Research Gaps	4
+2.6 Summary of Literature Review	4
+3. Problem Statement	5
+4. Research Questions	6
+5. Aim and Objectives	7
+5.1 Aim	7
+5.2 Objectives	7
+6. Significance of the Study	8
+7. Scope of the Study	9
+7.1 In-Scope	9
+7.2 Out-of-Scope	10
+7.3 Rationale for Scope Boundaries	10
+8. Research Methodology	12
+8.1 Dataset Description	12
+1. CNN/DailyMail	12
+2. Reddit TIFU	12
+3. PubMed	12
+4. Multi-News	12
+5. Newsroom	12
+8.2 Data Preprocessing	12
+8.3 Model Selection	13
+8.4 Parameter-Efficient Fine-Tuning (PEFT) Methods	13
+8.5 Experimental Setup	14
+8.6 Evaluation Metrics	14
+8.7 Energy Consumption Measurement	15
+8.8 Summary of Methodology	15
+9. Requirements Resources	16
+9.1 Computational Resources	16
+9.2 Software Resources	16
+9.3 Dataset Resources	16
+9.4 Summary	16
+10. Research Plan	17
+10.1 Narrative Research Plan	17
+10.2 Gantt Chart / Timeline	17
+10.4 Weekly Deliverables	18
+References	19
+
+
+1.Background
+Advances in transformer-based architectures have enabled large language models (LLMs) such as BART, T5 and LLaMA to deliver highly effective abstractive summaries across a wide range of domains. Their ability to capture contextual relationships over long text sequences has made them standard choices for summarisation tasks involving news articles, scientific literature, conversational content and multi-document sources. These datasets—such as CNN/DailyMail, Multi-News, Reddit TIFU, PubMed and Newsroom—differ considerably in structure, length and writing style, illustrating the versatility required from modern summarisation models.
+Although the performance of these models is well established, training or fine-tuning them in a conventional full-parameter manner remains resource intensive. Updating billions of parameters requires significant GPU memory and prolonged computation times, resulting in increased energy usage and a measurable environmental footprint. Concerns around sustainability have therefore become more visible as organisations deploy LLMs at scale, reinforcing the need for approaches that retain model quality while reducing computational overhead.
+To mitigate these challenges, several parameter-efficient fine-tuning (PEFT) techniques have been introduced. LoRA allows task-specific learning by adding low-rank matrices to selected layers while keeping the core model weights fixed. Adapter-based methods take a similar direction by inserting small trainable modules within transformer blocks, enabling targeted updates without modifying the entire network. QLoRA further extends this line of work by combining low-rank adaptation with low-precision quantisation, making it possible to fine-tune large models on modest hardware without substantial loss in performance.
+Although these approaches provide promising reductions in memory consumption and training cost, existing evaluations are often limited to single datasets or specific model architectures. As a result, there is still limited understanding of how PEFT methods behave when applied across datasets with contrasting linguistic and structural properties. Furthermore, while tools such as CodeCarbon can estimate energy usage and associated carbon emissions, their use in comparative studies of PEFT techniques remains uncommon.
+Given the increasing demand for sustainable machine learning practices, there is a need for systematic benchmarking that examines not only summarisation quality but also energy efficiency and environmental impact. This forms the foundation for the present study, which aims to provide a comprehensive analysis of energy-efficient fine-tuning strategies for generative summarisation models.
+
+2.Literature Review
+This chapter examines existing work on large language models (LLMs), parameter-efficient fine-tuning techniques, energy-aware machine learning, and benchmarking practices in text summarisation. The review highlights the limitations within current research and establishes the gaps that motivate the present study.
+2.1 Large Language Models and Text Summarization
+Transformer-based architectures have become central to contemporary abstractive summarisation due to their ability to capture contextual relationships over long spans of text. Models such as BART, T5 and LLaMA have demonstrated strong performance on a range of benchmarks, each employing distinct design strategies that support effective text generation. BART follows a denoising autoencoder paradigm, enabling the model to learn rich representations suitable for summarisation tasks. T5 adopts a unified text-to-text formulation, which simplifies task definitions and supports robust generalisation across domains. LLaMA focuses on achieving competitive performance through efficient training practices that rely on optimised datasets and streamlined architectures.
+Despite impressive results, fine-tuning these models in a full-parameter configuration is resource intensive. Updating hundreds of millions or billions of parameters consumes large amounts of memory and computation time, contributing to increased energy usage. These constraints have led to growing interest in alternative approaches that retain model quality while reducing the cost associated with task-specific adaptation.
+2.2 Parameter-Efficient Fine-Tuning (PEFT) Methods
+Parameter-efficient fine-tuning (PEFT) techniques have emerged as practical solutions for reducing the computational burden of adapting LLMs to downstream tasks. LoRA achieves efficiency by learning low-rank updates that are injected into transformer layers while keeping the original weights fixed. Adapter-based methods follow a similar philosophy, introducing small bottleneck modules between layers so that only a fraction of the model parameters are modified during training. QLoRA extends these ideas further by combining low-rank adaptation with low-bit quantisation, enabling fine-tuning of very large models on modest hardware.
+Although these approaches report competitive performance relative to full fine-tuning, most evaluations are carried out on isolated datasets or restricted experimental conditions. As a result, there is limited understanding of how LoRA, Adapters and QLoRA compare when assessed within a controlled, unified framework or when applied across datasets with different levels of complexity and variability.
+2.3 Energy-Efficient AI and Carbon Accounting Tools
+Growing awareness of the environmental footprint associated with machine learning has prompted efforts to monitor the energy consumed during model development. Prior studies show that training large neural models can generate substantial carbon emissions depending on hardware type, energy source and training duration. Tools such as CodeCarbon have been developed to estimate electricity usage and related emissions during training, offering a standardised approach for quantifying environmental impact.
+However, such tools are not widely incorporated into studies comparing PEFT methods. Much of the existing work focuses primarily on evaluation metrics such as ROUGE, with less attention on memory usage, training time or energy consumption. This absence of integrated assessment makes it difficult for practitioners to identify techniques that balance accuracy with sustainability.
+2.4 Multi-Dataset Benchmarking in Summarization
+Summarisation datasets differ considerably in format, vocabulary, writing style and domain. Datasets such as CNN/DailyMail consist of structured news articles with concise summaries, while Reddit TIFU reflects informal, user-generated narratives that often contain noise and irregularities. PubMed summarisation tasks involve biomedical literature requiring domain-specific comprehension, and Multi-News introduces multi-document summarisation, demanding cross-document reasoning. Newsroom includes summaries generated using both extractive and abstractive strategies across numerous publishers.
+Most prior research evaluates models on a single dataset, limiting the understanding of how PEFT methods generalise across heterogeneous text sources. Without comparative multi-dataset analysis, it remains unclear whether gains from PEFT techniques hold consistently when dataset characteristics vary.
+2.5 Identified Research Gaps
+From the reviewed literature, the following gaps remain:
+1.Limited comparative studies analysing LoRA, Adapters and QLoRA within a unified experimental framework.
+2.Insufficient benchmarking of PEFT techniques across multiple summarisation datasets with diverse linguistic properties.
+3.Lack of empirical evidence on how reductions in trainable parameters translate into measurable energy savings.
+4.Few studies integrate performance metrics, training cost, memory usage and environmental impact into a single evaluation pipeline.
+5.Limited practical guidance for selecting appropriate PEFT methods for sustainable deployment of LLM-based summarisation systems.
+2.6 Summary of Literature Review
+Overall, the literature indicates that PEFT methods offer promising reductions in computational overhead while maintaining high summarisation quality. However, research remains fragmented, with limited multi-dataset evaluations or systematic analysis of energy consumption. These gaps establish the need for a comprehensive study that benchmarks PEFT approaches across several datasets, models and evaluation criteria. The present research addresses this need by examining summarisation performance, resource requirements and environmental impact together within a consistent experimental setup.
+3.Problem Statement
+Large language models such as BART, T5 and LLaMA have become central to modern abstractive summarisation due to their strong representational capabilities. However, adapting these models through full-parameter fine-tuning remains computationally intensive. Updating very large parameter sets demands high memory capacity, extended training time and significant energy usage, creating barriers for researchers and organisations operating with limited computational resources. These challenges also raise concerns regarding the environmental sustainability of conventional fine-tuning strategies.
+Parameter-efficient fine-tuning (PEFT) techniques—including LoRA, Adapters and QLoRA—have been proposed as practical alternatives that reduce the number of trainable parameters while preserving model effectiveness. Although early findings indicate encouraging efficiency gains, most existing studies evaluate these techniques on isolated datasets or narrow experimental settings. As a result, it is unclear whether performance improvements and resource savings hold consistently across summarisation tasks that differ in content style, domain specificity and structural complexity.
+In parallel, tools such as CodeCarbon enable the measurement of electricity consumption and associated carbon emissions during training. Despite their relevance to sustainable AI, these tools are rarely incorporated into comparative analyses of PEFT methods. Consequently, the relationship between energy efficiency, computational cost and summarisation quality is not yet well understood.
+These gaps highlight the need for a systematic, multi-dataset investigation that evaluates PEFT methods not only in terms of accuracy but also with respect to energy usage and environmental impact. Addressing this need is essential for identifying fine-tuning strategies that support both high-quality summarisation and sustainable deployment of LLM-based systems.
+
+
+4.Research Questions
+This study investigates how parameter-efficient fine-tuning (PEFT) techniques can support sustainable and scalable adaptation of large language models for abstractive summarisation. Guided by the challenges outlined in the problem statement, the research aims to examine the effectiveness, efficiency and generalisability of LoRA, QLoRA and Adapter-based approaches. The study is structured around the following key questions:
+1.To what extent can PEFT methods reduce computational and energy requirements while maintaining competitive summarisation quality compared with full-parameter fine-tuning?
+2.How consistently do LoRA, QLoRA and Adapter-based techniques perform across summarisation datasets with varying linguistic structures, document lengths and domain-specific characteristics?
+3.Does the reduction in trainable parameters achieved through PEFT approaches result in measurable energy savings, as captured by energy and carbon tracking tools such as CodeCarbon?
+4.What trade-offs exist between energy efficiency, training time, memory usage and model accuracy when applying different PEFT methods across multiple datasets?
+
+Together, these questions guide the systematic evaluation of PEFT techniques and support an evidence-based understanding of their suitability for energy-efficient deployment in real-world generative AI applications.
+5.Aim and Objectives
+5.1 Aim
+
+The aim of this research is to examine the performance and energy efficiency of three Parameter-Efficient Fine-Tuning (PEFT) approaches—LoRA, QLoRA and Adapters—when applied to transformer-based summarisation models across multiple datasets. The study seeks to determine which method offers the most sustainable balance between summarisation quality, computational cost and environmental impact in the context of modern generative AI systems.
+
+5.2 Objectives
+
+To accomplish this aim, the study pursues the following objectives:
+
+Objective 1:
+To conduct a structured review of the literature on large language models, PEFT techniques and energy-aware machine learning, with the goal of identifying unresolved challenges and research gaps.
+
+Objective 2:
+To prepare, preprocess and standardise a range of summarisation datasets—including CNN/DailyMail, Reddit TIFU, PubMed, Multi-News and Newsroom—ensuring consistency across all experimental settings.
+
+Objective 3:
+To implement LoRA, QLoRA and Adapter-based fine-tuning on selected transformer architectures (BART, T5 and LLaMA) under uniform training configurations and controlled hyperparameters.
+
+Objective 4:
+To assess summarisation performance using ROUGE-1, ROUGE-2 and ROUGE-L, and to record energy consumption and associated carbon emissions during fine-tuning using CodeCarbon.
+
+Objective 5:
+To compare the three PEFT methods across all datasets in terms of accuracy, computational efficiency and energy usage, and to identify the most effective and environmentally sustainable fine-tuning strategy.
+6.Significance of the Study
+The rapid growth of large language models has intensified concerns around the substantial computational and energy demands associated with their fine-tuning and deployment. As model sizes increase, the environmental impact of training procedures becomes a critical issue, particularly for organisations with limited access to high-performance hardware. This study is significant because it addresses this challenge directly by examining whether parameter-efficient fine-tuning (PEFT) techniques—specifically LoRA, QLoRA and Adapters—can offer a practical route toward reducing resource usage while maintaining strong summarisation performance.
+From a technical perspective, the research adds value by investigating how PEFT methods perform across several summarisation datasets that differ in structure, scale and linguistic style. Most existing studies focus on a single dataset, leaving open questions about how consistently these methods operate under varying conditions. By analysing performance and energy consumption within a unified experimental design, the study provides evidence that can guide practitioners in selecting approaches that balance efficiency and accuracy.
+The findings also have relevance for industry. Many organisations wish to adopt LLM-based systems but may not have the computational capacity required for full fine-tuning. Demonstrating that PEFT techniques can significantly reduce memory needs and energy usage has the potential to make advanced summarisation models more accessible to small and medium-sized enterprises. The results may also support engineering teams in designing more sustainable machine-learning pipelines, helping reduce operational costs and environmental footprints.
+At a broader level, the study aligns with national and international efforts to promote responsible and sustainable use of artificial intelligence. Governments, regulatory bodies and research institutions increasingly emphasise the importance of reducing carbon emissions associated with digital technologies. By incorporating carbon-tracking tools such as CodeCarbon and reporting energy usage during fine-tuning, this research contributes data that can inform discussions on green AI and support emerging policy frameworks centered on environmental responsibility.
+Finally, the study offers academic value by providing one of the few structured comparisons of PEFT methods across multiple datasets, evaluated through both performance-based and energy-based metrics. The unified analytical framework proposed in this research may help shape future work on scalable and sustainability-oriented approaches to NLP, contributing to the broader movement toward environmentally conscious development of generative models.
+
+
+7.Scope of the Study
+This study focuses on evaluating parameter-efficient fine-tuning (PEFT) approaches for transformer-based summarisation models. The scope has been defined to ensure that the research remains feasible, methodologically coherent and aligned with the central aim of identifying energy-efficient fine-tuning strategies.
+7.1 In-Scope
+The following elements are included within the boundaries of this research:
+1. Parameter-Efficient Fine-Tuning Techniques
+Implementation and assessment of LoRA, QLoRA and Adapter-based approaches.
+Comparison of their performance, memory requirements and energy usage.
+2. Transformer Summarisation Models
+Fine-tuning of selected transformer architectures: BART, T5 and LLaMA.
+Use of consistent training configurations to ensure fair cross-model evaluation.
+3. Benchmark Summarisation Datasets
+Use of established English-language summarisation datasets, including:
+CNN/DailyMail
+Reddit TIFU
+PubMed Summarisation
+Multi-News
+Newsroom
+4. Dataset Preparation and Preprocessing
+Cleaning, tokenisation, text truncation and formatting.
+Development of a unified preprocessing pipeline for all datasets.
+5. Evaluation Criteria
+Assessment of summarisation quality using ROUGE-1, ROUGE-2 and ROUGE-L.
+Measurement of energy usage and estimated carbon emissions using CodeCarbon.
+6. Comparative Analysis
+Comparison of summarisation results across datasets.
+Comparative study of energy consumption across the three PEFT methods.
+Analysis of trade-offs between accuracy, efficiency and resource utilisation.
+7. Software and Computational Environment
+Use of Python, PyTorch, Hugging Face Transformers and CodeCarbon.
+Execution of experiments on cloud-based or GPU-enabled computing environments.
+7.2 Out-of-Scope
+To maintain clarity, focus and feasibility, the following areas fall outside the scope of the study:
+1. Full-Parameter Fine-Tuning
+No full-scale fine-tuning of large models due to hardware and energy constraints.
+2. Development of New Architectures or PEFT Methods
+The study does not design or propose new transformer architectures or tuning techniques; only existing PEFT methods are examined.
+3. Inference-Time Optimisation
+Deployment-related efficiency improvements, latency reduction or serving-time optimisation are excluded.
+4. Reinforcement Learning Approaches
+Techniques such as RLHF, PPO or reward-based optimisation are not considered.
+5. Model Compression Techniques
+Methods such as pruning, distillation or weight sharing do not form part of this study.
+6. Multilingual or Non-English Data
+Only English summarisation datasets are included; cross-lingual evaluation is not within scope.
+7. Ethical, Social or Cultural Impact Analysis
+Broader societal or ethical implications of LLMs are acknowledged but not analysed in this technical study.
+7.3 Rationale for Scope Boundaries
+The boundaries of this study have been defined to ensure that the research remains:
+Achievable within the time frame and computational resources available.
+Focused on evaluating PEFT techniques for transformer-based summarisation.
+Aligned with the overarching aim of identifying energy-efficient fine-tuning strategies.
+Consistent with the datasets and hardware accessible for experimental work.
+Defining the scope in this way ensures that the study remains both methodologically sound and academically rigorous.
+
+8.Research Methodology
+This chapter presents the methodological framework used to evaluate the performance and energy efficiency of three parameter-efficient fine-tuning (PEFT) techniques—LoRA, QLoRA and Adapters—applied to transformer-based summarisation models. The methodology covers dataset selection, preprocessing procedures, model configurations, training settings, evaluation metrics and environmental impact assessment through CodeCarbon.
+8.1 Dataset Description
+The study draws on five widely used benchmark datasets that represent a broad range of summarisation challenges. These datasets differ in text structure, domain complexity, document length and stylistic variation, offering a robust basis for analysing the behaviour of PEFT techniques across diverse conditions.
+1. CNN/DailyMail
+This dataset consists of detailed news articles paired with concise human-written summaries. Its structured, formal writing style provides a reliable benchmark for evaluating summarisation methods on traditional news content.
+2. Reddit TIFU
+Reddit TIFU (“Today I F***ed Up”) contains informal, user-submitted narratives characterised by conversational language, slang and noisy structure. Its lack of uniformity makes it suitable for assessing model robustness on unstructured text.
+3. PubMed
+The PubMed dataset comprises biomedical abstracts and associated summaries. It features specialised terminology and complex syntax, providing a challenging test for models requiring deeper semantic comprehension.
+4. Multi-News
+Multi-News includes multi-document summarisation samples created from multiple news sources. Each summary consolidates information from several articles, making this dataset ideal for evaluating a model’s ability to integrate and compress information across documents.
+5. Newsroom
+Newsroom is a large-scale collection of summaries generated through extractive, abstractive and hybrid strategies across a range of publishers. Its diversity in style and summarisation techniques enables analysis of model adaptability across heterogeneous text types.
+8.2 Data Preprocessing
+To ensure consistency across datasets, a unified preprocessing pipeline is applied. The main steps include:
+Tokenisation using the default tokenisers associated with each transformer architecture.
+Truncation or padding of input sequences to match model-specific maximum lengths.
+Removal of incomplete, duplicated or corrupted samples.
+Conversion of the dataset into an instruction–response format for decoder-only models such as LLaMA.
+These preprocessing steps ensure that variations in dataset length and structure do not introduce bias into model performance comparisons.
+8.3 Model Selection
+Three transformer-based models were selected for evaluation due to their strong performance in abstractive summarisation and compatibility with PEFT techniques:
+BART
+T5
+LLaMA
+These models represent encoder-decoder and decoder-only architectures commonly used within the summarisation domain, making them suitable baselines for a comparative study.
+8.4 Parameter-Efficient Fine-Tuning (PEFT) Methods
+The study examines three widely adopted PEFT methods that reduce the number of trainable parameters while maintaining competitive performance.
+8.4.1 LoRA (Low-Rank Adaptation)
+LoRA introduces trainable low-rank matrices into targeted components of the transformer architecture while keeping the original weights frozen. This approach significantly lowers memory usage and computational cost during fine-tuning.
+8.4.2 Adapters
+Adapter methods incorporate compact bottleneck modules between transformer blocks. Only these lightweight modules are updated during training, reducing the proportion of trainable parameters while enabling effective task-specific adaptation.
+8.4.3 QLoRA
+QLoRA builds on LoRA by integrating 4-bit quantisation, substantially reducing memory requirements during fine-tuning. This technique enables fine-tuning of large models on hardware with limited capacity while maintaining competitive performance.
+Together, these approaches allow for detailed analysis of efficiency–performance trade-offs across different model architectures and datasets.
+8.5 Experimental Setup
+All experiments are conducted under consistent training conditions to ensure fair comparison between PEFT methods. The setup includes:
+Hyperparameters such as batch size, learning rate and number of epochs selected within commonly adopted ranges.
+Use of standard optimisation and scheduling strategies recommended for transformer models.
+Uniform preprocessing and tokenisation across all datasets.
+Execution of training on GPU-enabled environments capable of supporting quantised and PEFT-based fine-tuning.
+A visual summary of the training and evaluation workflow is provided in Figure X.
+
+Figure X. Workflow of the Training and Evaluation Process 
+8.6 Evaluation Metrics
+Model performance is primarily evaluated using the ROUGE metric suite:
+ROUGE-1: overlap of unigrams
+ROUGE-2: overlap of bigrams
+ROUGE-L: longest common subsequence
+In addition to accuracy-based metrics, the study also measures:
+Training duration
+Memory utilisation
+Reduction in trainable parameters
+Energy consumption (kWh)
+Estimated carbon emissions
+These combined metrics allow for a holistic evaluation of both summarisation quality and resource efficiency.
+
+8.7 Energy Consumption Measurement
+Energy usage during fine-tuning is recorded using CodeCarbon, which tracks electricity consumption and estimates associated carbon emissions based on hardware type and regional energy grid information. This enables a consistent comparison of the environmental impact of LoRA, QLoRA and Adapter-based fine-tuning under identical training conditions.
+8.8 Summary of Methodology
+The methodological approach integrates diverse datasets, standardised preprocessing, PEFT-based fine-tuning strategies and a multi-angle evaluation framework. By jointly examining output quality, computational cost and environmental impact, the study provides a comprehensive comparison of LoRA, QLoRA and Adapter techniques, addressing key gaps identified in existing research.
+
+9.Requirements Resources
+This study relies on a combination of computational, software and data resources to support the evaluation of parameter-efficient fine-tuning (PEFT) methods across multiple summarisation tasks. The selected resources ensure that experiments can be conducted efficiently, reproducibly and within realistic hardware constraints.
+9.1 Computational Resources
+The experiments require access to a GPU-enabled computing environment capable of supporting transformer-based model fine-tuning. A mid- to high-performance GPU—such as an NVIDIA T4, V100 or A100—is necessary to manage the memory demands of models like BART, T5 and LLaMA and to accommodate quantisation-based methods used in QLoRA. The system must support CUDA operations and provide sufficient VRAM for loading pre-trained checkpoints and training PEFT modules. In addition, adequate disk storage is required to hold multiple datasets, intermediate preprocessing outputs, and fine-tuned model versions generated during experimentation.
+9.2 Software Resources
+The study relies on widely used open-source tools that enable efficient implementation of PEFT techniques. Python serves as the primary programming language, while PyTorch provides the deep learning framework necessary for model training. The Hugging Face Transformers, Datasets and Tokenizers libraries support model loading, preprocessing and dataset handling. The Accelerate library is used for device management and training optimisation. CodeCarbon is employed to measure energy consumption and estimate carbon emissions throughout the training process, enabling the sustainability analysis central to this research. Experiments are organised and documented using Jupyter Notebook or an equivalent environment to ensure transparency and reproducibility.
+9.3 Dataset Resources
+Five publicly available summarisation datasets are utilised for this study: CNN/DailyMail, Reddit TIFU, PubMed, Multi-News and Newsroom. These datasets are hosted on the Hugging Face Hub and can be accessed without special permissions for academic research. Their diversity in domain, linguistic style and document structure provides a comprehensive basis for evaluating the generalisability and efficiency of LoRA, QLoRA and Adapter-based fine-tuning.
+9.4 Summary
+The combination of GPU-based computing capabilities, established open-source software frameworks and diverse benchmarking datasets ensures that the research can systematically assess the performance and energy efficiency of PEFT methods. These resources provide a strong foundation for reproducible experimentation and enable rigorous comparison across models, datasets and fine-tuning strategies.
+
+10.Research Plan
+10.1 Narrative Research Plan
+The research plan is structured to ensure steady progress across all stages of the project and to align with the academic requirements of LJMU. The work begins with refining the research focus and conducting an in-depth review of existing literature on large language models, parameter-efficient fine-tuning methods and energy-aware machine learning. This stage also involves finalising the selection of datasets and transformer models to be used in the study, and establishing the methodological framework that will guide all subsequent experimentation.
+The next phase involves preparing the datasets through a standardised preprocessing pipeline. Tasks include tokenisation, text cleaning, truncation and formatting to ensure compatibility with BART, T5 and LLaMA models. Producing consistent dataset structures is essential to ensure fair comparison across the five chosen summarisation datasets.
+Once preprocessing is complete, the experimental phase begins. LoRA, QLoRA and Adapter-based fine-tuning are implemented using consistent hyperparameter settings to maintain comparability. During this stage, CodeCarbon is used to monitor energy consumption and estimate carbon emissions for each model–dataset combination, enabling accurate assessment of the environmental cost associated with each PEFT method.
+The evaluation phase follows, during which ROUGE-1, ROUGE-2 and ROUGE-L metrics are calculated to measure summarisation quality. Performance results, energy usage and memory efficiency data are then analysed collectively to identify trade-offs between accuracy and resource consumption. This comparative analysis informs the selection of the most efficient and sustainable fine-tuning strategy.
+The final phase involves synthesising the findings into a coherent narrative, developing visualisations and tables, and preparing the written report. The dissertation is then edited, proofread and formatted according to LJMU guidelines before final submission. This structured plan ensures that the project remains feasible, methodologically sound and academically rigorous.
+10.2 Gantt Chart / Timeline
+Table 10.3: Research Timeline (7 Weeks)
+Task / Activity	W1	W2	W3	W4	W5	W6	W7
+Topic refinement & research objectives	████	████					
+Literature review (LLMs, PEFT, datasets, energy efficiency)	████	████	████				
+Finalisation of research gap & problem statement		████	████				
+Dataset collection & understanding		████	████	████			
+Data preprocessing & cleaning			████	████			
+Model design & methodology finalisation			████	████			
+PEFT experiments (LoRA, QLoRA, Adapters)				████	████	████	
+Evaluation: ROUGE & CodeCarbon measurements					████	████	
+Analysis & comparison of results						████	████
+Drafting research proposal & documentation	████	████	████	████			
+Final formatting (LJMU guidelines)						████	████
+Supervisor feedback incorporation						████	████
+Final submission							████
+10.4 Weekly Deliverables
+Table 10.2: Weekly Deliverables
+Week	Key Deliverables
+Week 1	Finalised research topic, aim and objectives; initial literature review initiated.
+Week 2	Completed literature review and problem statement; research gap clearly defined.
+Week 3	Dataset preparation completed; preprocessing workflow and methodology finalised.
+Week 4	Initial LoRA and Adapter experiments conducted; early energy tracking results recorded.
+Week 5	QLoRA experiments completed; full CodeCarbon logs collected.
+Week 6	ROUGE scores generated; performance–efficiency comparison completed.
+Week 7	Final research proposal drafted, formatted according to LJMU standards, revised and prepared for submission.
+
+References
+[1]Bell, J. (2014) Doing Your Research Project. 6th edn. Maidenhead: Open University Press.
+[2]Dettmers, T., Lewis, M., Shleifer, S. and Zettlemoyer, L. (2023) ‘QLoRA: Efficient Finetuning of Quantized LLMs’, arXiv preprint arXiv:2305.14314. Available at: https://arxiv.org/abs/2305.14314 (Accessed: 5 October 2025).
+[3]Houlsby, N. et al. (2019) ‘Parameter-Efficient Transfer Learning for NLP’, Proceedings of the 36th International Conference on Machine Learning. Available at: https://arxiv.org/abs/1902.00751 (Accessed: 5 October 2025).
+[4]Hu, E. et al. (2021) ‘LoRA: Low-Rank Adaptation of Large Language Models’, arXiv preprint arXiv:2106.09685. Available at: https://arxiv.org/abs/2106.09685 (Accessed: 5 October 2025).
+[5]Lacoste, A. et al. (2019) ‘Quantifying the Carbon Emissions of Machine Learning’, arXiv preprint arXiv:1910.09700. Available at: https://arxiv.org/abs/1910.09700 (Accessed: 5 October 2025).
+[6]Lewis, M. et al. (2020) ‘BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension’, ACL 2020 Proceedings. Available at: https://arxiv.org/abs/1910.13461 (Accessed: 5 October 2025).
+[7]Lin, C. (2004) ‘ROUGE: A Package for Automatic Evaluation of Summaries’, Workshop on Text Summarization Branches Out. Available at: https://aclanthology.org/W04-1013/ (Accessed: 5 October 2025).
+[8]Raffel, C. et al. (2020) ‘Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer’, Journal of Machine Learning Research, 21(140), pp. 1–67.
+[9]Touvron, H. et al. (2023) ‘LLaMA: Open and Efficient Foundation Language Models’, arXiv preprint arXiv:2302.13971. Available at: https://arxiv.org/abs/2302.13971 (Accessed: 5 October 2025).
+[10]See, A., Liu, P. and Manning, C. (2017) ‘Get to the Point: Summarization with Pointer-Generator Networks’, ACL 2017 Proceedings. Available at: https://arxiv.org/abs/1704.04368 (Accessed: 5 October 2025).
+[11]Vaswani, A. et al. (2017) ‘Attention Is All You Need’, Advances in Neural Information Processing Systems. Available at: https://arxiv.org/abs/1706.03762 (Accessed: 5 October 2025).
+[12]Hermann, K.M. et al. (2015) ‘Teaching Machines to Read and Comprehend’, Neural Information Processing Systems (NIPS).
+[13]Wolf, T. et al. (2020) ‘Transformers: State-of-the-Art Natural Language Processing’, EMNLP 2020 Proceedings.
+[14]CNN/DailyMail Dataset (2015) Hugging Face Datasets. Available at: https://huggingface.co/datasets/abisee/cnn_dailymail (Accessed: 5 October 2025).
+[15]Reddit TIFU Dataset (2018) Hugging Face Datasets. Available at: https://huggingface.co/datasets/Fredithefish/Reddit-TIFU (Accessed: 5 October 2025).
+[16]Multi-News Dataset (2019) Hugging Face Datasets. Available at: https://huggingface.co/datasets/tau/multi_news (Accessed: 5 October 2025).
+[17]PubMed Summarization Dataset (2019) Hugging Face Datasets. Available at: https://huggingface.co/datasets/ccdv/pubmed-summarization (Accessed: 5 October 2025).
+[18]Newsroom Dataset (2018) Hugging Face Datasets. Available at: https://huggingface.co/datasets/LogeshChandran/newsroom (Accessed: 5 October 2025).

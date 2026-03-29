@@ -1,0 +1,55 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║                  🔧 INSTALL PACKAGES FIRST 🔧                  ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+Your virtual environment needs PyTorch and other packages installed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 STEP 1: INSTALL PACKAGES
+
+Run this command:
+
+    .\INSTALL_SIMPLE.bat
+
+This will install:
+✓ PyTorch with CUDA support
+✓ Transformers
+✓ PEFT
+✓ Datasets
+✓ Evaluate (for ROUGE scores)
+✓ All other dependencies
+
+Time: 5-10 minutes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 STEP 2: TEST EVALUATION
+
+After installation completes, run:
+
+    .\TEST_EVALUATION.bat
+
+Time: 1-2 minutes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP 3: FULL EVALUATION
+
+If test passes, run:
+
+    .\RUN_EVALUATION_ALL.bat
+
+Time: 3-5 hours
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ QUICK START:
+
+1. .\INSTALL_SIMPLE.bat
+2. .\TEST_EVALUATION.bat
+3. .\RUN_EVALUATION_ALL.bat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
