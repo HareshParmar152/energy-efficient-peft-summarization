@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "SAMSUM_E14",
+    "dataset":  "SAMSum",
+    "model":  "T5",
+    "method":  "QLoRA",
+    "rouge1":  0.4236,
+    "rouge2":  0.1898,
+    "rougeL":  0.3534,
+    "training_time_hours":  9.8,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  10
+}

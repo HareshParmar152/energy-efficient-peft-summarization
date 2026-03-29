@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "SAMSUM_E27",
+    "dataset":  "SAMSum",
+    "model":  "GPT-2",
+    "method":  "Adapters",
+    "rouge1":  0.0979,
+    "rouge2":  0.0384,
+    "rougeL":  0.0784,
+    "training_time_hours":  7.2,
+    "trainable_params_pct":  0.42,
+    "status":  "Complete",
+    "rank_overall":  38
+}

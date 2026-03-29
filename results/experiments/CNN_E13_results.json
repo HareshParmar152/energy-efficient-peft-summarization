@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "CNN_E13",
+    "dataset":  "CNN/DailyMail",
+    "model":  "T5",
+    "method":  "LoRA",
+    "rouge1":  0.3218,
+    "rouge2":  0.1318,
+    "rougeL":  0.2305,
+    "training_time_hours":  14.2,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  15
+}

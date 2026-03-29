@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "SAMSUM_E25",
+    "dataset":  "SAMSum",
+    "model":  "GPT-2",
+    "method":  "LoRA",
+    "rouge1":  0.0943,
+    "rouge2":  0.0378,
+    "rougeL":  0.0775,
+    "training_time_hours":  7.1,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  39
+}

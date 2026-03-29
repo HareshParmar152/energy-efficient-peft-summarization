@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "BILLSUM_E27",
+    "dataset":  "BillSum",
+    "model":  "GPT-2",
+    "method":  "Adapters",
+    "rouge1":  0.3019,
+    "rouge2":  0.0912,
+    "rougeL":  0.1901,
+    "training_time_hours":  6.5,
+    "trainable_params_pct":  0.42,
+    "status":  "Complete",
+    "rank_overall":  44
+}

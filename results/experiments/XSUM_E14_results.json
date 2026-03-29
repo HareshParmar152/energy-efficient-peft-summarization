@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "XSUM_E14",
+    "dataset":  "XSum",
+    "model":  "T5",
+    "method":  "QLoRA",
+    "rouge1":  0.2622,
+    "rouge2":  0.0758,
+    "rougeL":  0.2087,
+    "training_time_hours":  8.1,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  29
+}

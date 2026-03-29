@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "BILLSUM_E3",
+    "dataset":  "BillSum",
+    "model":  "BART",
+    "method":  "Adapters",
+    "rouge1":  0.4303,
+    "rouge2":  0.246,
+    "rougeL":  0.3185,
+    "training_time_hours":  12.3,
+    "trainable_params_pct":  0.42,
+    "status":  "Complete",
+    "rank_overall":  11
+}

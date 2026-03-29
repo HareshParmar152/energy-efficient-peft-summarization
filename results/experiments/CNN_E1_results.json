@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "CNN_E1",
+    "dataset":  "CNN/DailyMail",
+    "model":  "BART",
+    "method":  "LoRA",
+    "rouge1":  0.5599,
+    "rouge2":  0.32,
+    "rougeL":  0.5231,
+    "training_time_hours":  12.5,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  1
+}

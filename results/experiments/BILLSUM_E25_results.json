@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "BILLSUM_E25",
+    "dataset":  "BillSum",
+    "model":  "GPT-2",
+    "method":  "LoRA",
+    "rouge1":  0.2992,
+    "rouge2":  0.0891,
+    "rougeL":  0.1876,
+    "training_time_hours":  10.1,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  42
+}

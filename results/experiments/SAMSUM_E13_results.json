@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "SAMSUM_E13",
+    "dataset":  "SAMSum",
+    "model":  "T5",
+    "method":  "LoRA",
+    "rouge1":  0.4555,
+    "rouge2":  0.2146,
+    "rougeL":  0.3756,
+    "training_time_hours":  10.2,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  5
+}

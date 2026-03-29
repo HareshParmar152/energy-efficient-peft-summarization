@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "PUBMED_E15",
+    "dataset":  "PubMed",
+    "model":  "T5",
+    "method":  "Adapters",
+    "rouge1":  0.2739,
+    "rouge2":  0.099,
+    "rougeL":  0.1774,
+    "training_time_hours":  9,
+    "trainable_params_pct":  0.42,
+    "status":  "Complete",
+    "rank_overall":  24
+}

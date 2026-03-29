@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "PUBMED_E13",
+    "dataset":  "PubMed",
+    "model":  "T5",
+    "method":  "LoRA",
+    "rouge1":  0.2737,
+    "rouge2":  0.0999,
+    "rougeL":  0.1782,
+    "training_time_hours":  9.1,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  25
+}

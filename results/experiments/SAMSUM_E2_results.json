@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "SAMSUM_E2",
+    "dataset":  "SAMSum",
+    "model":  "BART",
+    "method":  "QLoRA",
+    "rouge1":  0.4249,
+    "rouge2":  0.1881,
+    "rougeL":  0.3519,
+    "training_time_hours":  8.9,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  9
+}

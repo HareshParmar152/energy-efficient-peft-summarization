@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "BILLSUM_E13",
+    "dataset":  "BillSum",
+    "model":  "T5",
+    "method":  "LoRA",
+    "rouge1":  0.4589,
+    "rouge2":  0.2837,
+    "rougeL":  0.3545,
+    "training_time_hours":  13.8,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  4
+}

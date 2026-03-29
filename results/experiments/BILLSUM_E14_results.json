@@ -1,0 +1,13 @@
+{
+    "experiment_id":  "BILLSUM_E14",
+    "dataset":  "BillSum",
+    "model":  "T5",
+    "method":  "QLoRA",
+    "rouge1":  0.1916,
+    "rouge2":  0.0612,
+    "rougeL":  0.1423,
+    "training_time_hours":  8.21,
+    "trainable_params_pct":  0.38,
+    "status":  "Complete",
+    "rank_overall":  34
+}
