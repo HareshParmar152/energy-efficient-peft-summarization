@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Large model checkpoints (upload to Google Drive instead)
+ALL_EXPERIMENTS_BACKUP_*/
+**/checkpoints/
+**/optimizer.pt
+**/rng_state.pth
+**/scaler.pt
+**/scheduler.pt
+**/training_args.bin
+**/*.safetensors
+**/*.pt
+**/*.bin
+
+# Logs noise
+*.log

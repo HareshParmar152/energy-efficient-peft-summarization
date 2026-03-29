@@ -1,0 +1,27 @@
+# PyTorch with CUDA 11.8 support
+# Install with: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch
+torchvision
+torchaudio
+
+# Transformers and PEFT
+transformers>=4.30.0
+peft>=0.4.0
+adapters>=0.2.0
+
+# Datasets and Evaluation
+datasets>=2.12.0
+evaluate>=0.4.0
+rouge-score>=0.1.2
+
+# Training utilities
+accelerate>=0.20.0
+bitsandbytes>=0.39.0
+
+# Monitoring
+codecarbon>=2.2.0
+tqdm>=4.65.0
+
+# Additional dependencies
+sentencepiece>=0.1.99
+protobuf>=3.20.0
